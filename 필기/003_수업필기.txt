@@ -1,0 +1,46 @@
+https://github.com/rambus2006/Programming
+
+과제 제출할 때 띄여쓰기까지 주의해서 제출하자 
+쌤이 매우매우 꼼꼼하시다.
+
+깃 로그인 확인
+git config --list
+
+현재 연결 확인
+$ git remote -v 
+
+연결 제거
+$ git remote remove origin
+
+<기타>
+user.name 이라고 된 부분
+
+Git 영역
+
+(1) Working Directory (Local)
+
+    : 개인 코드 작성
+
+(2) Staging 영역
+
+    :? git add 를 통해서 수정된 코드를 올리는 영역
+
+(3) Repository
+
+    : ? git commit 을 통해서 최종 수정본을 제출
+
+git push
+
+------------------------------------------------------------------------------------------
+교보문고 사이트 만들어보기
+
+<git>
+init : 
+add : 기록할만한 것을 추가하는 것 
+commit : 파일 이름처럼 history에 기록하는 것
+push : github 서버에 올리는 것
+
+git 설정
+이름 : 
+git config --local user.name "이름"
+git config --local user.email "이메일"

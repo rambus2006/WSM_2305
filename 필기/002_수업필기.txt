@@ -1,0 +1,22 @@
+{클라이언크와 서버}
+IP주소->도메인주소
+클라이언트가 요청한 것을 서버가 받아 준다. 
+browser → 주소표시줄 → DNS: URL → ip 주소 → server
+
+{풀스택}
+HTML/CSS/JS 
+Framework
+
+{html}
+text<supper<hyper
+markup:마킹을 해서 표현되는 것의 기능을 설명하는 것
+	글자가 어떤 역할을 하는지 알려주는 것
+	ex) 태그
+	<TAG ATTR=Value>제목</TAG>
+
+{vscode}
+단축키:윈도우1234~ 메인 창 고정
+
+{hr}
+
+
