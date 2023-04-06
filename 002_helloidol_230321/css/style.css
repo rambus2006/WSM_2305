@@ -15,3 +15,40 @@ h1,
 h2{
     background-color: plum;
 }
+h5~h6, /*h5에서 h6의 텍스트도 color:#333; font-size:32px; 에 해당된다. */
+ol,
+ul {
+    color:#333;
+    font-size: 32px; /*font-color나 color아님*/
+}
+.korea{
+    color:skyblue;
+}
+.usa,
+.japan{
+    color:crimson; /*눈뽕 안맞는 빨강색*/
+}
+.incheon{
+    color:darkblue;
+}
+.leader{
+    color:purple;
+}
+li:nth-child(5){ /*li(동급의) 자체의 5번째*/
+    text-decoration: underline;
+} 
+li:nth-child(even){ /*odd:홀수 ; even(=2n):짝수 ; 1n하면 전부다 해당된다. */
+    background-color: #eee;
+}
+li:nth-child(5n){ /*5의 배수*/
+    background-color: #aaa;
+}
+[type="text"]{
+    background-color: aqua;
+}
+ul:nth-child(3)>li:nth-child(2){ /*nth-child : 두번쨰 자식중에 ul이 있으면 그것이라고 가리킨다. */
+    text-decoration: overline;
+}
+body > div:nth-child(8) > ul:nth-child(2) > li:nth-child(2){ /*개발자 도구 -우측마우스-copy-selector눌러서 ctrl+c/v*/
+    font-size: 8px;
+}
