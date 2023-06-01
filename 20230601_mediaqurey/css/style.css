@@ -1,0 +1,21 @@
+/*desktop*/
+body{
+    background-color: crimson;
+}
+/* tablet */
+/* 최대 너비가 720px일 떄, 적용 */
+/* 우측 아래 golive꺼져있는지 확인  */
+@media screen and (max-width:720px) { /*시험문제 :  720까지일 때만 적용,720보다 작을 때만 적용 */
+    body{
+        background-color: dodgerblue;
+    }
+}
+/* mobile */
+/* 최대 너비가 540px일 떄, 적용 */
+/* min-width로도 적용 가능  */
+@media screen and (max-width:540px)  {
+    body{
+        background-color: silver;
+    }
+    
+}

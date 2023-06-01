@@ -1,0 +1,23 @@
+/*min-width는 큰범위부터 코드를 작성해야 한다. 
+1px보다 큰 영역은 silver로,
+540px 보타 큰 영역은 dodgerblue
+720px 보다 큰 영역은 crimson으로
+내 앱이 휴대폰에서 많이 쓰인다면 모바일버전부터 만드는 것이 좋다. */
+/* mobile */
+@media screen and (min-width:1px) {
+    body{
+        background-color: silver;
+    }
+}
+/* tablet */
+@media screen and (min-width:540px) {
+    body{
+        background-color: dodgerblue;
+    }
+}
+/* desktop */
+@media screen and (min-width:720px) {
+    body{
+        background-color: crimson;
+    }
+}
