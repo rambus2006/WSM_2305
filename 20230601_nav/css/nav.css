@@ -100,6 +100,7 @@ nav{
         right:16px; /*햄버거 메뉴 원위치/오른쪽을 기준으로 16px만큼*/
     }
     /* .show-menu하면, .nav-list 보이게  */
+    
     /* .show-menu하면, .nav-toggle의 모양 X자로 */
     .show-menu{
         height:171px; 

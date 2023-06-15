@@ -1,0 +1,212 @@
+<!-- 
+    1. 반응형 header바가 너무 복잡=>더 단순하게 바꾸기 
+    2. 헤더 요소 벌리기 -> 해결(absolue로 바꾸로 left, right로 위치 조정하니 해결)
+    3. 3-4(눈올 때),3-5(천둥번개 칠 때 색깔 추가 )
+
+-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>반응형 홈</title>
+     <!-- <link rel="stylesheet" href="reset.css"> -->
+     <link rel="stylesheet" href="../CSS/responsivheader.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+     <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+     <!-- 헤더바 -->
+ <header>
+     <nav class="navbar">
+         <!-- 로고 -->
+        <span class="navbar_logo">
+            <img src="../images/Icon/핏북로고little.png" alt="">
+            <a href="#"></a>   
+        </span>
+
+         <!-- 메뉴 -->
+         <ul class="navbar_menu">
+             <li class="nav-item"><a href="">홈</a></li>
+             <li class="nav-item"><a href="">오늘의 색</a></li>
+             <li class="nav-item"><a href="">옷 정보 수정</a></li>
+             <li class="nav-item"><a href="">옷 사러가기</a></li>
+         </ul>
+         <!-- 링크 -->
+         <ul class="navbar_links">
+             <i class="bi bi-list"></i>
+         </ul>
+     </nav>
+ </header>
+     
+     <!-- 2. 날씨에 따른 배경화면  -->
+     <script>
+     $.getJSON('https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=445b3cd606b8d39b7e81eb4afdc9f694',function(data){
+         //data
+         //alert(data.list[0].main.temp_min);
+         var $now = new Date($.now());
+         var $minTemp = data.main.temp_min;
+         var $maxTemp = data.main.temp_max;
+         var $cTemp = data.main.temp;
+         var $cDate = ($now.getFullYear()+'-'+($now.getMonth()+1) + '-' + $now.getDate() + '/' + $now.getHours() + ':' + $now.getMinutes());
+         var $wIcon = data.weather[0].icon;
+         var $now = new Date($.now());
+ 
+         var weather = data.weather[0].main;
+         //배경 이미지 숨김
+            $("#mist").hide();
+            $("#rain").hide();
+            $("#cloud").hide();
+            $("#thunder").hide();
+            $("#snow").hide();
+            $("#default").hide();
+            $("#clear").hide();
+        
+        //색깔 숨기기
+
+        $(".color-clear").hide();
+        $(".color-cloud").hide();
+        $(".color-rain").hide();
+        $(".color-mist").hide();
+            
+
+        alert(data.weather[0].main);
+         //날씨에 맞게 배경이미지 보이게 하기 
+         if (weather=="Clear") {
+             $("#clear").show();
+             $(".color-clear").show();
+         }
+         if(weather=="Clouds"){
+             $("#cloud").show();
+             $(".color-cloud").show();
+         }
+         if(weather=="Rain"){
+             $("#rain").show();
+             $(".color-rain").show();
+         }
+         if(weather=="Snow"){
+             $("#snow").show();
+         }
+         if(weather=="Thunderstorm"){
+             $("#thunder").show();
+         }
+         if(weather=="Mist"){
+            $("#mist").show();
+            $(".color-mist").show();
+         }
+ 
+         
+     });
+     </script>
+     <!--2. 날씨에 따라 변하는 이미지-->
+     <!--배경화면 이미지 맨 위에 있는 게 로드되기 전 기본값 -->
+     <img src="../images/Photo/white.png" id="default" alt="" style="width:100%">
+     <!--날씨에 따른 이미지-->
+     <img src="../images/Photo/clear.jpg" id="clear" alt="" style="width:100%">
+     <img src="../images/Photo/cloud.jpg" id="cloud" alt="" style="width:100%"> <!--웜톤-->
+     <img src="../images/Photo/rain.jpg" id="rain" alt="" style="width:100%" >
+     <img src="../images/Photo/snow.jpg" id="snow" alt="" style="width:100%">
+     <img src="../images/Photo/thunderstorm.jpg" id="thunder" alt="" style="width:100%">
+     <img src="../images/Photo/mist.jpg" id="mist" alt="" style="width:100%">
+     <!-- 3.날씨에 따른 색 추천 팔레트 -->
+    <!-- 3-1 맑은 날의 색깔 추천 -->
+    <div class="colorcard">
+        <div class="color-clear">
+            <div class="row">
+                <div class="col-sm-3 col-md-3 col-lg-3 Campanula">
+                    <img src="../images/Color/LemonChrome.png" alt="">
+                    <a href="https://www.instagram.com/p/CtNogsepUxh/"><h4>LemonChrome</h4></a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3 Midnight">
+                    <img src="../images/Color/PinkDogwood.png" alt="">
+                    <a href="https://www.instagram.com/p/Cs-nIx1ux26/"><h4>PinkDogwood</h4></a> 
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3 ClassicBlue">
+                    <img src="../images/Color/MarineGreen.png" alt="">
+                    <a href="https://www.instagram.com/p/CsstJCruN1l/"><h4>MarineGreen</h4></a>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3 ElectricBlue">
+                    <img src="../images/Color/GoldenFleece.png" alt="">
+                    <a href="https://www.instagram.com/p/CqUlehyOyc0/"><h4>GoldenFleece</h4></a>
+                </div>
+            </div>
+        </div>
+        <!-- 3-2 구름이 꼈을 때의 색깔 추천 -->
+        <div class="color-cloud container">
+            <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 Campanula">
+                        <img src="../images/Color/Henna.png" alt="">
+                        <a href="https://www.instagram.com/p/CsstJCruN1l/"><h4>Henna</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 Midnight">
+                        <img src="../images/Color/DustedClay.png" alt="">
+                        <a href="https://www.instagram.com/p/CsstJCruN1l/"><h4>DustedClay</h4></a> 
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 ClassicBlue">
+                        <img src="../images/Color/GreenTint.png" alt="">
+                        <a href="https://www.instagram.com/p/CsstJCruN1l/"><h4>GreenTint</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 ElectricBlue">
+                        <img src="../images/Color/Mole.png" alt="">
+                        <a href="https://www.instagram.com/p/CsstJCruN1l/"><h4>Mole</h4></a>
+                    </div>
+            </div>
+        </div>
+
+        <!-- 3-3 비가 올 때의 색깔 추천  -->
+        <div class="color-rain container">
+            <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 Campanula">
+                        <img src="../images/Color/Campanula.png" alt="">
+                        <a href="https://www.instagram.com/p/CYnlXtDJJKi/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg=="><h4>Campanula</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 Midnight">
+                        <img src="../images/Color/Midnight.png" alt="">
+                        <a href="https://www.instagram.com/p/ChleAfjp7Ex/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg=="><h4>Midnight</h4></a> 
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 ClassicBlue">
+                        <img src="../images/Color/Bluing.png" alt="">
+                        <a href="https://www.instagram.com/p/Ce5SJelpY5e/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg=="><h4>ClassicBlue</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 ElectricBlue">
+                        <img src="../images/Color/electricBlue.png" alt="">
+                        <a href="https://www.instagram.com/p/Ce5SJelpY5e/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg=="><h4>ElectricBlue</h4></a>
+                    </div>
+            </div>
+        </div>
+        <!-- 3-4(눈올 때),3-5(천둥번개 칠 때 색깔 추가 ) -->
+
+        <!--3-6 안개 낄 때-->
+        <div class="color-mist container">
+            <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 BrightWhite">
+                        <img src="../images/Color/BrightWhite.png" alt="">
+                        <a href="https://www.instagram.com/p/CtLTU5mpL5w/"><h4>BrightWhite</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 VivaMagenta">
+                        <img src="../images/Color/VivaMagenta.png" alt="">
+                        <a href="https://www.instagram.com/p/CtLTU5mpL5w/"><h4>VivaMagenta</h4></a> 
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 Veryperi">
+                        <img src="../images/Color/veryperi.png" alt="">
+                        <a href="https://www.instagram.com/stories/highlights/17904982664417841/"><h4>Veryperi</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 SendDaller">
+                        <img src="../images/Color/SendDaller.png" alt="">
+                        <a href="https://www.instagram.com/p/CskpKwpJyaL/"><h4>SendDaller</h4></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+     
+ </body>
+ </html>

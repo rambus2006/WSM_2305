@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div id="loginform">
+            <h1><i>Login</i></h1>
+            <form name="form" >
+                <label>Username: </label>
+                <input type="text" id="user" name="user_id"></br></br>
+                <label>Password: </label>
+                <input type="password" id="pass" name="user_pass"></br></br>
+                <p>
+                    <input type="submit" onclick="check(this.form)" id="btn" value="login" name = "submit"/>
+                </p>
+            </form>
+            <script> 
+                function check(form)
+                {
+                    if(form.user_id.value=="admin"&&form.user_pass.value=="1111")
+                    {
+                        alert("로그인 성공")
+                        window.location.href = "HTML/responsiveheather.html";
+                    }else{
+                        alert("Error: 아이디 또는 비밀번호가 잘못되었습니다.")
+                    }
+                }
+            </script>
+        </div>
+        
+    </body>
+</html>
+

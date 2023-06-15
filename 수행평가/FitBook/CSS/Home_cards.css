@@ -1,0 +1,111 @@
+/*6-1 홈 화면 (비오는 날 배경) */
+.rainbackground img{
+    width:100vw;
+    height:100vh;
+    opacity: 0.6; /*불투명도 설정*/
+    position: relative;
+}
+/*6-2 홈화면 날씨 텍스트1*/
+.rainText{
+    position: absolute;
+    font-size: 50px;
+    top: 40px;
+    left: 40px;
+    margin:0;
+    line-height : 1.4em;
+    
+}
+.rainText h1{
+    color:#6484C3;
+    font-style: bold;
+    font-size:100px;
+}
+/*6-3 홈화면 날씨 컬러팔레트 추천*/
+/*6-3-1 카드1(Campanula)*/
+.cardCampanula{
+    position: absolute;
+    margin:auto;
+    width: 240px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 5%;
+    background-color: white;
+    top:800px;
+    margin-left:16px;
+    left:0px;
+    display: block;
+    visibility: visible;
+}
+.cardCampanula img{
+    margin-top:20px;
+    margin-left:20px;
+    margin-right:20px;
+    width: 200px;
+    height: 160px;
+    border-radius:4%;
+}
+.cardCampanula h1{
+    color:black;
+    margin-left: 16px;
+    margin-top: 0;
+
+}
+/*6-3-2 카드1(Midnight)*/
+.cardMidnight{
+    position: absolute;
+    margin:auto;
+    width: 240px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 5%;
+    background-color: white;
+    top:800px;
+    margin-left:16px;
+    left:800px;
+    display: block;
+    visibility: visible;
+}
+.cardMidnight img{
+    margin-top:20px;
+    margin-left:20px;
+    margin-right:20px;
+    width: 200px;
+    height: 160px;
+    border-radius: 4%;
+}
+.cardMidnight h1{
+    color:black;
+    margin-left: 16px;
+    margin-top: 0px;
+
+}
+
+/*6-3-3 카드1(ClassicBlue)*/
+.cardClassicBlue{
+    position: absolute;
+    margin:auto;
+    width: 240px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 5%;
+    background-color: white;
+    top:800px;
+    margin-left:16px;
+    left:700px;
+    display: block;
+    visibility: visible;
+}
+.cardClassicBlue img{
+    margin-top:20px;
+    margin-left:20px;
+    margin-right:20px;
+    width: 200px;
+    height: 160px;
+    border-radius: 4%;
+}
+.cardClassicBlue h1{
+    color:black;
+    margin-left: 16px;
+    margin-top: 0px;
+
+}

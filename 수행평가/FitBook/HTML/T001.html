@@ -1,0 +1,76 @@
+<!--해야하는 일-20230612(월)
+    1. json파일에서 데이터 가져오기 x -> 그냥 페이지 만들어서 링크하기 
+    2. 표 크기 조절하기 -> 빨리하기,할 때 데이터도 같이 넣기 
+    3. Info 랑 선이랑 한줄로 배치하기 ->고민중
+    4. textarea 크기와 위치 조절하기 ->조절 ㄱㄱ
+    5. 반응형웹으로 만들기 ->이게 제일 중요!!!
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/sidebars.css">
+    <link rel="stylesheet" href="T000_UppperContent.css">
+    <script src="https://kit.fontawesome.com/f7cec210fe.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+    <title>내가 가진 옷</title>
+</head>
+<!-- json파일 데이터 연결하기  -->
+<script>
+    $.getJSON('http://localhost/FitBook/HTML/clothdata.json',function(data){
+        var $dataname = data.data01.name;
+        var $buydata = data.data01.buydata;
+        alert($dataname);
+    });
+    
+</script>
+<body>
+<!--메뉴바-->
+<header>  
+<!--1-1 nav바-->
+    <nav class="navbar container-fluid">
+        <div class="row navbar_logo ">
+            <img class="col-lg-12 col-md-2 col-sm-1" src="../images/Icon/핏북로고.png">
+            <a href="#"></a>
+        </div>
+    </nav>
+    <!--2. 햄버거 버튼구현-->     
+    <!--옆에서 나오는 창 구현  -->
+    <input class="burger-check" type="checkbox" id="burger-check" /><label class="burger-icon" for="burger-check"><span class="burger-sticks"></span></label>
+    <div class="menu">
+        <div style="width: 400px;"></div>
+        <hr>
+        <ul class="navbar_menu">
+            <li><a href="Home.html">홈</a></li>
+            <li><a href="../HTML/weather_api.html">오늘의 색</a></li>
+            <li><a href="">오늘의 코디</a></li>
+            <li><a href="../HTML/ClothInfo.html">옷 정보 수정</a></li>
+            <li><a href="htdocs\ShoppingmallProject\mart\index.html">옷 사러가기<i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        </u>
+    </div>
+</header> 
+<content>
+    <div class="Upcontent">
+        <img src="../images/상의/T001.jpg" alt="">
+        <textarea name="T001" id="T001" cols="80" rows="20">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, obcaecati. Dolores eum vel qui iste consectetur asperiores saepe odio rerum provident cumque totam illo sed, nulla repudiandae? Accusantium, temporibus optio.
+        </textarea>
+    </div>
+    <span class="Downcontent">
+        <h1><i>Info</i></h1><hr>
+        <table class="table" border="1">
+            <tr>
+                <td>이름</td>
+                <td class="dataname">Hello</td>
+            </tr>
+            <tr>
+                <td>구매날짜</td>
+                <td class="buydate"></td>
+            </tr>
+        </table>
+    </span>
+    </div>
+</content>
+</body>
+</html>

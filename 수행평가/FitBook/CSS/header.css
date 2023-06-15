@@ -1,0 +1,21 @@
+:root{
+  /*color*/
+  --first-color:#9A7B57;
+}
+li{
+  /* 사이드바에 들어가는 목록 */
+  list-style: none; 
+}
+/* 1.header */
+/* 1-1nav 태그  */
+
+header{
+  background-color: var(--first-color);
+  position: fixed;
+  top:0;
+  right: 0;
+  left: 0;
+}
+nav{
+  height: 60px;
+}

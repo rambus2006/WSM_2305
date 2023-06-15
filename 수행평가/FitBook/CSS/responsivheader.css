@@ -1,0 +1,184 @@
+:root{
+    --first-color:#9a7b57;
+    --second-color: #F6EBE2;
+}
+body{
+    margin:0;
+    padding:0;
+}
+/* a{
+    text-decoration: none;
+    color:var(--first-color);
+} */
+/*1. 헤더바*/
+/*1-1 header태그*/
+header{
+    background-color: var(--first-color);
+    position:fixed; /*스크롤 해도 항상 위치 고정하자*/ /*본문과는 다른 영역(본문이 가려져 있는 상태)*/
+    top:0;
+    right:0; /*오른쪽 끝까지 */
+    left:0;  /*왼쪽 끝까지 */
+    z-index: 1;
+}
+/*1-2 header>nav태그(navbar클래스) */
+.navbar{
+    display:flex;
+    position: absolute;
+    padding-top:16px;
+    justify-content: space-between;
+    background-color: var(--first-color);
+    height: 30px;
+   
+}
+/*1-3 navbar클래스>navbar_logo클래스(핏북 로고 이미지)*/
+.navbar_logo img{
+    position: relative; /*navbar의 자식*/
+    width: 80px;
+    height: 48px;
+    margin:0;
+    padding:0px;
+    top:0px;
+    left:16px;
+}
+/*1-4 navbar_menu클래스 */
+.navbar_menu{
+    position: relative;
+    display: flex;
+    list-style: none;
+    column-gap: 100px; /*요소 간 간격*/
+}
+/*1-5 nav 클래스>안에 있는메뉴들*/
+.navbar_menu li{
+    padding: 8px 16px;
+    position: flex;
+    text-align: center;
+}
+.navbar_menu a{
+    position: flex;
+    color:var(--second-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+/*1-6 navbar 클래스안의 햄버거 아이콘 */
+.navbar_links i{
+    color:var(--second-color);
+    font-size: 40px;
+    visibility: hidden;
+}
+/* 2. 날씨에 따른 색 추천 팔레트 */
+
+/* 2-1 color-clear 맑은 날일 때 */
+.container{
+    display: grid;
+}
+/* 배경의 하얀색부분 */
+.container{
+    margin: 0;
+    padding:0;
+    top:40%;
+    position:relative;
+    width: 100%;
+    height:100vh;
+    text-align: center;
+    visibility: visible;
+    background-color: white;
+    z-index:0;
+}
+.row{
+   display: inline;
+    margin:16px;
+    text-align: center;
+}
+/* 각 색깔 밑의 글자  */
+.row h4{
+    color:black;
+}
+/* 2-3 각 색깔 이미지 크기 */
+.row img{
+    width:200px;
+    height:200px;
+}
+
+
+/* 탭 */
+@media screen and (max-width:992px) {
+    .row{
+        margin: 0;
+        text-align: center;
+    }
+    .row img{
+        margin:16px;
+    }
+}
+/* 모바일 */
+@media screen and (max-width:768px) {
+    .navbar{
+        justify-content: space-between;
+        margin:0;
+        padding:0;
+    }
+    /*[moblie] M-1-5 nav 클래스>안에 있는메뉴들*/
+    .navbar_menu {
+        margin-left: 0;
+        padding-left: 0;
+        position: absolute; /*포지션을 통해 부모값인 reletive를 기준으로 절댓값, 위 없으니까 헤더바 컨테이너에서 분리됨*/
+        top:44px;
+        right:0; /*한 줄당 너비가 오른쪽 끝까지 넓어짐 */
+        left:0; /* 한 줄당 너비가 왼쪽 끝까지*/
+
+        flex-direction: column; /* nav-item 수직정렬*/
+        text-align: center; /*차지하는 크기는 똑갔지만 가운데 정렬*/
+        background-color:var(--second-color);
+       
+    
+    }
+    .navbar_menu ul{
+        display: block;
+        list-style:none;
+    }
+    .navbar_menu li{
+        padding: 1em 0em; /*item들의 위 아래 여백/상하 여백은 16px(=1em),좌우 여백은 0*/
+        border-bottom: 2px solid #9a7b57;
+    }
+    .navbar_menu a{
+        position: flex;
+        color:var(--first-color);
+        text-decoration: none;
+        font-weight: bold;
+       
+    }
+    /*1-3 navbar클래스>navbar_logo클래스(핏북 로고 이미지)*/
+    .navbar_logo img{
+        position: absolute; /*navbar의 자식*/
+        width: 80px;
+        height: 48px;
+        margin:0;
+        padding-left:0;
+        top:0px;
+        left:16px;
+        
+    }
+    /*[moblie] 1-6 navbar 클래스안의 햄버거 아이콘 */
+    .navbar_links i{
+        font-size: 30px;
+        visibility: visible;
+        position: absolute;
+        right: 16px;
+
+    }
+    /* 2. 날씨에 따른 색 추천 팔레트 */
+    /* 2-1 color-clear 맑은 날일 때 */
+    .container{
+        display: grid;
+        background-color: white;
+        height: 100%;
+    }
+    .row{
+        margin: 0;
+        text-align: center;
+   
+    }
+    .row img{
+        margin:40px;
+    }
+}
