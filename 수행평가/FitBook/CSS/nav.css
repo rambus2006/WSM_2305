@@ -1,64 +1,77 @@
-
-/* 2. 날씨에 따른 색 추천 팔레트 */
-/* 2-1 배경의 하얀색부분 */
-.colorcard{
-    top:50%;
-    width: 100%;
-    height: 800px;
-    background-color: white;
-    visibility: visible;
+:root{
+    --first-color:#9a7b57;
+    --second-color: #F6EBE2;
+}
+body{
+    margin:0;
+    padding:0;
+}
+/* a{
+    text-decoration: none;
+    color:var(--first-color);
+} */
+.weather > img{
+    background-repeat : no-repeat;
+    width:100%;
+    height: 100%;
     position: absolute;
 }
-.container{
-    margin: 0;
-    padding:0;
-    margin-top: 24px;
-    display: grid;
-    position:relative;
-    width: 100vw;
+/*1. 헤더바*/
+/*1-1 header태그*/
+header{
+    background-color: var(--first-color);
+    position:fixed; /*스크롤 해도 항상 위치 고정하자*/ /*본문과는 다른 영역(본문이 가려져 있는 상태)*/
+    top:0;
+    right:0; /*오른쪽 끝까지 */
+    left:0;  /*왼쪽 끝까지 */
+    z-index: 1;
+}
+/*1-2 header>nav태그(navbar클래스) */
+.navbar{
+    display:flex;
+    position: absolute;
+    padding-top:16px;
+    justify-content: space-between;
+    background-color: var(--first-color);
+    height: 30px;
+   
+}
+/*1-3 navbar클래스>navbar_logo클래스(핏북 로고 이미지)*/
+.navbar_logo img{
+    position: relative; /*navbar의 자식*/
+    width: 80px;
+    height: 48px;
+    margin:0;
+    padding:0px;
+    top:0px;
+    left:16px;
+}
+/*1-4 navbar_menu클래스 */
+.navbar_menu{
+    position: relative;
+    display: flex;
+    list-style: none;
+    column-gap: 100px; /*요소 간 간격*/
+}
+/*1-5 nav 클래스>안에 있는메뉴들*/
+.navbar_menu li{
+    padding: 8px 16px;
+    position: flex;
     text-align: center;
-    visibility: visible;
-    z-index:0;
 }
-.row{
-   display: inline;
-   text-align: center;
-   margin-left: 100%;
-   margin-right:100%;
-   top:400px;
+.navbar_menu a{
+    position: flex;
+    color:var(--second-color);
+    text-decoration: none;
+    font-weight: bold;
 }
-/* 2-2 각 색깔 밑의 글자  */
-.row h4{
-    color:black;
+/*1-6 navbar 클래스안의 햄버거 아이콘 */
+.navbar_links i{
+    color:var(--second-color);
+    font-size: 40px;
+    visibility: hidden;
 }
-/* 2-3 각 색깔 이미지 크기 */
-.row img{
-    width:200px;
-    height:200px;
-}
-/* 배경 */
 
-
-/* 탭 */
-@media screen and (max-width:992px) {
-    .row{
-        margin: 0;
-        text-align: center;
-        top:300px;
-    }
-    .row img{
-        margin:16px;
-    }
-    .colorcard{
-        top:40%;
-        width: 100%;
-        height: 800px;
-        background-color: white;
-        visibility: visible;
-        position: absolute;
-    }
-}
-/* 모바일 */
 @media screen and (max-width:768px) {
     .navbar{
         justify-content: space-between;
@@ -114,35 +127,4 @@
         right: 16px;
 
     }
-    /* 2. 날씨에 따른 색 추천 팔레트 */
-    /* 2-1 color-clear 맑은 날일 때 */
-    .colorcard{
-        top:30%;
-        width: 100%;
-        height: 800px;
-        background-color: white;
-        visibility: visible;
-        position: absolute;
-    }
-    .container{
-        display: grid;
-    }
-    .row{
-        margin: 0;
-        text-align: center;
-   
-    }
-    .row img{
-       margin:0;
-       width:200px;
-    }
-    .colorimg{
-        display: inline-block;
-    }
-    
-        
-
-        
-
-    
 }
