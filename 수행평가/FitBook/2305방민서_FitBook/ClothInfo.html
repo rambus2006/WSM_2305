@@ -24,6 +24,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
     <title>핏북,당신의 옷장을 책임져드립니다.</title>
+    <script type="text/javascript">
+        // 옷 마다 정보 가져오는 창 만들기 
+    function openChild()
+        {
+            // window.name = "부모창 이름"; 
+            window.name = "ClothInfo.html";
+            // window.open("open할 window", "자식창 이름", "팝업창 옵션");
+            window.open("T000.html",
+                    "childForm", "width=570, height=350, resizable = no, scrollbars = no");    
+        }
+</script>
 </head>
 <body>
     <header>  
@@ -56,7 +67,8 @@
    <!--드롭다운 메뉴 https://ungdoli0916.tistory.com/784-->
 <button class="accordion">상의 </button>
     <div class="panel">
-        <input type="image" src="../images/상의/T001.jpg" onclick="window.open('http://localhost/FitBook/HTML/T001.html')" id="parentValue" style="width:100px; height:100px"></input> 
+        <input type="image" src="../images/상의/T001.jpg" onclick="openChild()" style="width:100px; height:100px"
+        ></input> 
         <input type="image" src="../images/상의/T002.jpg" style="width:100px; height:100px"></input> 
         <input type="image" src="../images/상의/T003.jpg" style="width:100px; height:100px"></input> 
         <input type="image" src="../images/상의/T004.jpg" style="width:100px; height:100px"></input> 

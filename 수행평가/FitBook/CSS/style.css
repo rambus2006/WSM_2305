@@ -40,12 +40,23 @@ body{
     font-size: large;
     border-radius: 10px;
     border:none;
+    text-align: center;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 992px) {
     #form {
       width: 65%;
       margin-left:none;
       padding:40px;
+    }
+    #user{
+        width: 100px;
+    }
+    #pass{
+        width: 100px;
+    }
+    #btn{
+        width: 80px;
+        
     }
   }
