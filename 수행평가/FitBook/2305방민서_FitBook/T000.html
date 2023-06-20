@@ -6,26 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/T000.css">
     <link rel="stylesheet" href="../CSS/nav.css">
+    <!-- <link rel="stylesheet" href="../CSS/responsivheader.css"> -->
     <script src="../JavaScript/nav.js"></script>
-    <script src="http://code.jquery.com/jquery-1.7.min.js" ></script> 
+    <!-- <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>  -->
     <!-- <script src="send.js" defer></script> -->
-    <link rel="stylesheet" href="">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-        <content>
-            <!-- 값 출력해주는 스크립트  -->
-            <script type="text/javascript">
-                var _img001 = document.getElementById("pInput");
-                var _img001 = "./";
-                function getParentText(){
+    <content>
+        <!-- 값 출력해주는 스크립트  -->
+        <script type="text/javascript">
+            var _img001 = document.getElementById("pInput");
+            var _img001 = "구매 날짜 : 2021-02-12";
+            function getParentText(){
                     document.getElementById("cInput").value = _img001;
-                }
-           </script>
-            <!-- 값 가져오는 getParentText()함수  -->
-            <input type="text" id="cInput"> <input type="button" value="가져오기" onclick="getParentText()">
+            }
+            // 미리 로딩해둘 이미지 이름 배열
+            var files = ["../images/상의/T0001.jpg"]
+            var imgs = new Array();
+            imgs[i] = new Image(); // 이미지 객체 생성
+            var next = 0;
+            function change(img) {
+                img.src = imgs[next].src; // 이미지 변경
+            }
+        </script>
+        <!-- 값 가져오는 getParentText()함수  -->
+        <input type="text" id="cInput"> <input type="button" value="가져오기" onclick="getParentText()" onclick="change(this)">
             
-        </content>
+    </content>
 
 </body>
 </html>

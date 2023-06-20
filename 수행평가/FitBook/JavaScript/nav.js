@@ -1,5 +1,5 @@
 const navbar_links = nav_toggle.getElementsByTagName("i")[0];
-const navbar_menu = document.getElementsByClassName("nav_item")[0];
+const navbar_menu = document.getElementsByClassName("nav_item");
 
 console.log(navbar_links);
 console.log(navbar_menu);
@@ -10,5 +10,5 @@ nav_toggle.onclick=()=>{
     navbar_links.classList.toggle("bi-list");
     navbar_links.classList.toggle("bi-x-lg");
     //.nav-list .show-menu toggle
-    navbar_menu.classList.toggle("show-menu");
+    navbar_links.classList.toggle("show-menu");
 };

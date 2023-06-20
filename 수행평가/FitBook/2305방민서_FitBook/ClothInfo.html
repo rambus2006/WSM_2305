@@ -31,33 +31,33 @@
             // window.name = "부모창 이름"; 
             window.name = "ClothInfo.html";
             // window.open("open할 window", "자식창 이름", "팝업창 옵션");
-            window.open("T000.html",
-                    "childForm", "width=570, height=350, resizable = no, scrollbars = no");    
+            window.open("T000.html","상의_001",'height=' + screen.height + ',width=' + screen.width + 'fullscreen=yes');
         }
 </script>
 </head>
 <body>
-    <header>  
+    <!-- 헤더바 -->
+    <header>
         <nav class="navbar">
             <!-- 로고 -->
-           <span class="navbar_logo">
-               <img src="../images/Icon/핏북로고little.png" alt="">
-               <a href="#"></a>   
-           </span>
-   
+            <span class="navbar_logo">
+                <img src="../images/Icon/핏북로고little.png" alt="">
+                <a href="#"></a>   
+            </span>
+
             <!-- 메뉴 -->
             <ul class="navbar_menu">
-                <li class="nav_item"><a href="responsiveheather.html">홈</a></li>
-                <li class="nav_item"><a href="">오늘의 색</a></li>
-                <li class="nav_item"><a href="">옷 정보 수정</a></li>
-                <li class="nav_item"><a href="">옷 사러가기</a></li>
+                <li class="nav-item"><a href="index.html">홈</a></li>
+                <li class="nav-item"><a href="">오늘의 색</a></li>
+                <li class="nav-item"><a href="ClothInfo.html">옷 정보 수정</a></li>
+                <li class="nav-item"><a href="">옷 사러가기</a></li>
             </ul>
             <!-- 링크 -->
-            <ul class="navbar_toggle">
+            <ul class="navbar_links">
                 <i class="bi bi-list"></i>
             </ul>
         </nav>
-    </header> 
+    </header>
     
     <span class="Profile">
         <i class="bi bi-person-circle"></i>

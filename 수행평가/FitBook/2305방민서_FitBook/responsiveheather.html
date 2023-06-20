@@ -26,28 +26,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
  </head>
  <body>
-     <!-- 헤더바 -->
- <header>
-     <nav class="navbar">
-         <!-- 로고 -->
-        <span class="navbar_logo">
-            <img src="../images/Icon/핏북로고little.png" alt="">
-            <a href="#"></a>   
-        </span>
+    <!-- 헤더바 -->
+    <header>
+        <nav class="navbar">
+            <!-- 로고 -->
+            <span class="navbar_logo">
+                <img src="../images/Icon/핏북로고little.png" alt="">
+                <a href="#"></a>   
+            </span>
 
-         <!-- 메뉴 -->
-         <ul class="navbar_menu">
-             <li class="nav-item"><a href="index.html">홈</a></li>
-             <li class="nav-item"><a href="">오늘의 색</a></li>
-             <li class="nav-item"><a href="ClothInfo.html">옷 정보 수정</a></li>
-             <li class="nav-item"><a href="">옷 사러가기</a></li>
-         </ul>
-         <!-- 링크 -->
-         <ul class="navbar_links">
-             <i class="bi bi-list"></i>
-         </ul>
-     </nav>
- </header>
+            <!-- 메뉴 -->
+            <ul class="navbar_menu">
+                <li class="nav-item"><a href="index.html">홈</a></li>
+                <li class="nav-item"><a href="">오늘의 색</a></li>
+                <li class="nav-item"><a href="ClothInfo.html">옷 정보 수정</a></li>
+                <li class="nav-item"><a href="">옷 사러가기</a></li>
+            </ul>
+            <!-- 링크 -->
+            <ul class="navbar_links">
+                <i class="bi bi-list"></i>
+            </ul>
+        </nav>
+    </header>
      
      <!-- 2. 날씨에 따른 배경화면  -->
      <script>
@@ -63,6 +63,8 @@
          var $now = new Date($.now());
  
          var weather = data.weather[0].main;
+         
+         $("default").show();
          //배경 이미지 숨김
             $("#mist").hide();
             $("#rain").hide();
@@ -80,7 +82,7 @@
         $(".color-mist").hide();
             
 
-        alert(data.weather[0].main);
+        
          //날씨에 맞게 배경이미지 보이게 하기 
          if (weather=="Clear") {
              $("#clear").show();
