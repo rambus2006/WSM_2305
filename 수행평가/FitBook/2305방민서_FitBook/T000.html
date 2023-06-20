@@ -25,18 +25,15 @@
         <!-- 값 출력해주는 스크립트  -->
         <script type="text/javascript">
             var _img001 = document.getElementById("pInput");
-            var _img001 = "구매 날짜 : 2021-02-12";
+            var imglink="../images/상의/T00";
+            var photo = [imglink+"1.jpg"];
+            // 구매 날짜 
+            var buydate= ["2021-02-12","2020-03-13"];
+        
             function getParentText(){
-                    document.getElementById("cInput").value = _img001;
+                    document.getElementById("cInput").value = buydate[0];
             }
-            // 미리 로딩해둘 이미지 이름 배열
-            var files = ["../images/상의/T0001.jpg"]
-            var imgs = new Array();
-            imgs[i] = new Image(); // 이미지 객체 생성
-            var next = 0;
-            function change(img) {
-                img.src = imgs[next].src; // 이미지 변경
-            }
+          
         </script>
         <!-- 값 가져오는 getParentText()함수  -->
         <input type="text" id="cInput"> <input type="button" value="가져오기" onclick="getParentText()" onclick="change(this)">

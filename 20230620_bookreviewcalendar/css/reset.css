@@ -1,0 +1,17 @@
+/*reset CSS*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none; /*앞에 글머리 기호 없애기*/
+}
+a {
+    text-decoration: none;
+    color:#000;
+}
+img{
+    max-width: 100%; /*비율 유지하면서 사진을 보여줄 수 있다.  */
+    /* height:auto; */
+}
