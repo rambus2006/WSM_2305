@@ -80,3 +80,15 @@ let reviews = [
         "thoughts": "좋은 말. 지키기는 어려운",
     },
 ]
+
+// let entertainer=["아이유","이석훈","zb1"]
+// console.log(entertainer[2]);
+
+// let person = {"group":"zb1","name":"장하오","country":"china"}
+// // 이름을 꺼내는 방법
+// console.log(person.name);
+// console.log(person["name"]);
+
+// //유연을 찾는 방법
+// console.log(books[3].author);
+// console.log(books[3]["author"]);
