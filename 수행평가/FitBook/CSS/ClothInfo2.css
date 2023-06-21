@@ -53,31 +53,30 @@ overflow: hidden;
 }
 /*4. 프로필 사진 및 수정*/
 /*4-1 프로필 사진*/
+.Profile{
+  background-color: #F6EBE2;
+}
 .Profile i{
-    size: 100px;
-    width: 300px;
-    height: 300px;
-    display:block;
+    top:120px;
+    left: 50px;
+    position: relative;
+    font-size: 100px;
+    color:black;
     visibility: visible;
+    display: block;
 
 }
 .Profile h1{
-    top:20px;
+    position: relative;
+    top:10px;
     left: 100px;
     padding-left: 140px;
     padding-top: 40px;
-    display:inline-block;
+    display:block;
 }
-.Profile h5{
-    top:0px;
-    margin: 0px;
-    padding-left: 20px;
-    padding-top: 100px;
-    display:inline-block;
-    color: black;
-}
-.Profile h5 a{
-    color: black;
+.menu{
+  top:100px;
+  position: relative;
 }
 
 @media (max-width:992px) {

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
+
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <script>
+    // $.getJSON('https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=445b3cd606b8d39b7e81eb4afdc9f694',function(data){
+    //     //data
+    //     //alert(data.list[0].main.temp_min);
+    //     var $now = new Date($.now());
+    //     var $minTemp = data.main.temp_min;
+    //     var $maxTemp = data.main.temp_max;
+    //     var $cTemp = data.main.temp;
+    //     var $cDate = ($now.getFullYear()+'-'+($now.getMonth()+1) + '-' + $now.getDate() + '일' + $now.getHours() + ':' + $now.getMinutes());
+    //     var $wIcon = data.weather[0].icon;
+    //     var $now = new Date($.now());
+
+    //     $("#rain").hide();
+    //     var weather = data.weather[0].main;
+    //     // alert(data.weather[0].main);
+    //     if (weather == "Clear") {
+    //         $("#rain").show();
+    //     }
+    //     $('.clowtemp').append($minTemp);
+    //     $('.ctemp').append($cTemp);
+    //     $('.chightemp').append($maxTemp);
+    //     $('h2').prepend($cDate);
+    //     $('.cicon').append('<img src="https://openweathermap.org/img/wn/'+ $wIcon+'.png"/>');
+    //     //<img src="https://openweathermap.org/img/wn/10d@2x.png"/>
+    // }); -->
+
+    
+</script>
+<body>
+<div class="text1 ">
+    <h1>오늘의 색은</h1>
+</div>
+<script>
+    $.getJSON('colordata.json',function(coldata){
+         var $color = coldata.main.color;
+         $('.text1').append($color);
+    });
+    var arr1 = ["red","blue"]
+</script>
+<div class="text2">
+    <h1>입니다.</h1>
+</div>
+<!-- <h1>weather</h1>
+<h2>-날씨정보</h2>
+<div class="ctemp">현재 온도: </div>
+<div class="clowtemp">최저 온도: </div>
+<div class="chightemp">최고 온도: </div>
+<div class="cicon">아이콘 : </div> -->
+</body>
+</html>

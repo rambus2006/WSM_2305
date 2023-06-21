@@ -13,7 +13,6 @@
     margin: 0;
     padding:0;
     margin-top: 24px;
-    display: grid;
     position:relative;
     width: 100vw;
     text-align: center;
@@ -21,6 +20,7 @@
     z-index:0;
 }
 .row{
+
    display: inline;
    text-align: center;
    margin-left: 100%;
@@ -36,7 +36,6 @@
     width:200px;
     height:200px;
 }
-/* 배경 */
 
 
 /* 탭 */
@@ -137,6 +136,7 @@
        width:200px;
     }
     .colorimg{
+        position: relative;
         display: inline-block;
     }
     

@@ -1,9 +1,3 @@
-<!-- 
-    1. 반응형 header바가 너무 복잡=>더 단순하게 바꾸기 
-    2. 헤더 요소 벌리기 -> 해결(absolue로 바꾸로 left, right로 위치 조정하니 해결)
-    3. 3-4(눈올 때),3-5(천둥번개 칠 때 색깔 추가 )
-
--->
  <!DOCTYPE html>
  <html lang="en">
  <head>
@@ -11,46 +5,54 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>핏북,당신의 옷장을 책임져드립니다.</title>
      <link rel="stylesheet" href="../CSS/nav.css">
-     <!-- <link rel="stylesheet" href="reset.css"> -->
      <link rel="stylesheet" href="../CSS/responsivheader.css">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-     <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>
 
-    <!-- 합쳐지고 최소화된 최신 CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- <script src="../JavaScript/nav.js"></script> -->
+    <!--jqurey 문-->
+    <!-- <script src="http://code.jquery.com/jquery-1.7.min.js" ></script> -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- <script src="../JavaScript/header.js"></script> -->
 
-    <!-- 부가적인 테마 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
- </head>
+</head>
  <body>
-    <!-- 헤더바 -->
-    <header>
-        <nav class="navbar">
-            <!-- 로고 -->
-            <span class="navbar_logo">
-                <img src="../images/Icon/핏북로고little.png" alt="">
-                <a href="#"></a>   
-            </span>
+    <nav class="navbar">
+        <!-- 로고 -->
+        <span class="navbar_logo">
+            <img src="../images/Icon/핏북로고little.png" alt="">
+            <a href="#"></a>   
+        </span>
 
-            <!-- 메뉴 -->
-            <ul class="navbar_menu">
-                <li class="nav-item"><a href="index.html">홈</a></li>
-                <li class="nav-item"><a href="">오늘의 색</a></li>
-                <li class="nav-item"><a href="ClothInfo.html">옷 정보 수정</a></li>
-                <li class="nav-item"><a href="">옷 사러가기</a></li>
-            </ul>
-            <!-- 링크 -->
-            <ul class="navbar_links">
-                <i class="bi bi-list"></i>
-            </ul>
-        </nav>
-    </header>
-     
-     <!-- 2. 날씨에 따른 배경화면  -->
-     <script>
+        <!-- 메뉴 -->
+        <ul class="navbar_menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
+            <li class="nav-item"><a href="" class="nav-link">오늘의 색</a></li>
+            <li class="nav-item"><a href="ClothInfo.html" class="nav-link">옷 정보 수정</a></li>
+            <li class="nav-item"><a href="" class="nav-link">옷 사러가기</a></li>
+        </ul>
+        <!-- 링크 -->
+        <div class="navbar_links" id="nav_toggle">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+    <script type="text/JavaScript">
+        const navToggle = document.getElementById("nav_toggle");
+        const navToggleI = nav_toggle.getElementsByTagName("i")[0];
+        const navListUl = document.getElementsByClassName("navbar_menu")[0];
+
+        console.log(navToggleI);
+        console.log(navListUl);
+        //.nav-toggle클릭하면
+        nav_toggle.onclick=()=>{
+            //.nav-toggle i 햄버거메뉴 <-> X
+            //클래스에서 bi-list <-> bi-x-lg
+            navToggleI.classList.toggle("bi-list");
+            navToggleI.classList.toggle("bi-x-lg");
+            //.nav-list .show-menu toggle
+            navListUl.classList.toggle("show-menu");
+        };
+    </script> 
+    <script>
      $.getJSON('https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=445b3cd606b8d39b7e81eb4afdc9f694',function(data){
          //data
          //alert(data.list[0].main.temp_min);
@@ -106,11 +108,11 @@
             $("#mist").show();
             $(".color-mist").show();
          }
- 
-         
      });
      </script>
-     <!--2. 날씨에 따라 변하는 이미지-->
+
+
+<!--2. 날씨에 따라 변하는 이미지-->
      <div class="weather">
         <!--배경화면 이미지 맨 위에 있는 게 로드되기 전 기본값 -->
         <img src="../images/Photo/white.png" id="default" alt="" style="width:100%">
@@ -125,7 +127,6 @@
      <!-- 3.날씨에 따른 색 추천 팔레트 -->
     <!-- 3-1 맑은 날의 색깔 추천 -->
     <div class="colorcard">
-        
         <div class="color-clear container">
             <div class="row">
                 <div class="col-sm-3 col-md-3 col-lg-1 Campanula colorimg">

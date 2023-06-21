@@ -1,6 +1,5 @@
-const navToggle = document.getElementById("nav_toggle");
-const navToggleI = navToggle.getElementsByTagName("i")[0];
-const navListUl = document.getElementsByClassName("navbar_menu")[0];
+const navToggleI = nav_toggle.getElementsByTagName("i")[0];
+const navListUl = document.getElementsByClassName("nav-list")[0];
 
 console.log(navToggleI);
 console.log(navListUl);

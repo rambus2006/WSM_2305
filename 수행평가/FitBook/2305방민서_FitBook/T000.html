@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/T000.css">
+    <!-- <link rel="stylesheet" href="../CSS/T000.css"> -->
     <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/T000.css">
     <!-- <link rel="stylesheet" href="../CSS/responsivheader.css"> -->
     <script src="../JavaScript/nav.js"></script>
     <!-- <script src="http://code.jquery.com/jquery-1.7.min.js" ></script>  -->
     <!-- <script src="send.js" defer></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
     <!-- 합쳐지고 최소화된 최신 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -29,19 +32,60 @@
             var photo = [imglink+"1.jpg"];
             // 구매 날짜 
             var buydate= ["2021-02-12","2020-03-13"];
-        
+            // <!-- 값 가져오는 getParentText()함수  -->
             function getParentText(){
                     document.getElementById("cInput").value = buydate[0];
             }
+            function closeChild(){
+                window.close();
+            }
           
         </script>
-        <!-- 값 가져오는 getParentText()함수  -->
-        <input type="text" id="cInput"> <input type="button" value="가져오기" onclick="getParentText()" onclick="change(this)">
+        <header>
+            <nav class="navbar">
+                <!-- 로고 -->
+                <span class="navbar_reply">
+                    <i class="bi bi-reply" onclick="closeChild()"></i>
+                </span>
+            </nav>
+        </header>
             
+
+        <input type="text" id="cInput" class="buydate"> <input type="button" value="가져오기" onclick="getParentText()" onclick="change(this)">
+         
+        <h1>Info</h1>
+        <hr>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
     </content>
 
 </body>
+
 </html>
-<script>
-   
-</script>

@@ -1,4 +1,19 @@
-#cInput{
-  position: block;
-  top:500px;
+.buydate{
+    margin-top:100px;
+}
+h1{
+    color:black;
+    
+}
+a{
+    color: white;
+}
+.navbar_reply{
+    font-size: 24px;
+    color:white;
+    left:16px;
+    position: absolute;
+}
+.table{
+    margin:20px;
 }

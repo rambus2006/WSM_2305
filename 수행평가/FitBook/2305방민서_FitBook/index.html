@@ -1,3 +1,16 @@
+<!-- 해야 할 일
+    1. 반응형 header바가 너무 복잡=>더 단순하게 바꾸기 (수업시간에 배운 걸로 해결-> js가 값을 지정하지 못하는 문제발생)
+    2. 헤더 요소 벌리기 -> 해결(absolue로 바꾸로 left, right로 위치 조정하니 해결)
+    3. 3-4(눈올 때),3-5(천둥번개 칠 때 색깔 추가 )
+    4. json파일로 자식창에 값 전달하기(형식은 그대로, 데이터만 바꾸기)
+    5. 자식창 반응형으로 만들기 
+    --1차 완성---------------------------
+    <시간이 되면>
+    1. 홈화면 내용 더 넣기 (날씨 색에 대한 심리학 설명페이지 제작(json파일로 데이터와 배경색만 바꾸기)-오늘의 색)
+    2. 날씨 색 추가&바꾸기,a태그 바꾸기) - 어도비 컬러 이용
+    3.오늘의 색 부분 설문조사식으로 바꿔서 결과값 나오게 하기 
+    
+-->
 <html>
     <head>
         <title>Login</title>
@@ -12,13 +25,15 @@
         <div id="loginform">
             <h1><i>Login</i></h1>
             <form name="form" >
-                <label>Username: </label>
-                <input type="text" id="user" name="user_id"></br></br>
-                <label>Password: </label>
-                <input type="password" id="pass" name="user_pass"></br></br>
-                <p>
-                    <input type="   " onclick="check(this.form)" id="btn" value="login" name = "submit"/>
-                </p>
+                <div class="userid">
+                    <label>Username: </label>
+                    <input type="text" id="user" name="user_id"></br></br>
+                </div>
+                <div class="userpw">
+                    <label>Password: </label>
+                    <input type="password" id="pass" name="user_pass"></br></br>
+                </div>
+                <input type="button" onclick="check(this.form)" class="btn" id="btn" value="login" name = "submit"/>
             </form>
             <script> 
                 function check(form)
