@@ -1,0 +1,90 @@
+<div class="colorcard">
+        <div class="color-clear container">
+            <div class="row">
+                <div class="col-sm-1 col-md-2 col-lg-1 item1 colorimg">
+                    <img src="../images/Color/LemonChrome.png" alt="">
+                    <a href="https://www.instagram.com/p/CtNogsepUxh/"><h4>LemonChrome</h4></a>
+                </div>
+                <div class="col-sm-1 col-md-2 col-lg-1 item2 colorimg">
+                    <img src="../images/Color/PinkDogwood.png" alt="">
+                    <a href="https://www.instagram.com/p/Cs-nIx1ux26/"><h4>PinkDogwood</h4></a> 
+                </div>
+                <div class="col-sm-1 col-md-2 col-lg-1 ClassicBlue colorimg">
+                    <img src="../images/Color/MarineGreen.png" alt="">
+                    <a href="https://www.instagram.com/p/CsstJCruN1l/"><h4>MarineGreen</h4></a>
+                </div>
+                <div class="col-sm-1 col-md-2 col-lg-1 ElectricBlue colorimg">
+                    <img src="../images/Color/GoldenFleece.png" alt="">
+                    <a href="https://www.instagram.com/p/CqUlehyOyc0/"><h4>GoldenFleece</h4></a>
+                </div>
+            </div>
+        </div>
+        <!-- 3-2 구름이 꼈을 때의 색깔 추천 -->
+        <div class="color-cloud container">
+            <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 Campanula colorimg">
+                        <img  src="../images/Color/Henna.png" alt="">
+                        <h4><a href="https://www.instagram.com/p/CsstJCruN1l/">Henna</a></h4>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 Midnight colorimg">
+                        <img src="../images/Color/DustedClay.png" alt="">
+                        <h4><a href="https://www.instagram.com/p/CsstJCruN1l/">DustedClay</a></h4>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 ClassicBlue colorimg">
+                        <img src="../images/Color/GreenTint.png" alt="">
+                        <a href="https://www.instagram.com/p/CsstJCruN1l/"><h4>GreenTint</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 ElectricBlue colorimg">
+                        <img src="../images/Color/Mole.png" alt="">
+                        <a href="https://www.instagram.com/p/CsstJCruN1l/"><h4>Mole</h4></a>
+                    </div>
+            </div>
+        </div>
+
+        <!-- 3-3 비가 올 때의 색깔 추천  -->
+        <div class="color-rain container">
+            <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 Campanula colorimg">
+                        <img src="../images/Color/Campanula.png" alt="">
+                        <a href="https://www.instagram.com/p/CYnlXtDJJKi/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg=="><h4>Campanula</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 Midnight colorimg">
+                        <img src="../images/Color/Midnight.png" alt="">
+                        <a href="https://www.instagram.com/p/ChleAfjp7Ex/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg=="><h4>Midnight</h4></a> 
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 ClassicBlue colorimg">
+                        <img src="../images/Color/Bluing.png" alt="">
+                        <a href="https://www.instagram.com/p/Ce5SJelpY5e/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg=="><h4>ClassicBlue</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 ElectricBlue colorimg">
+                        <img src="../images/Color/electricBlue.png" alt="">
+                        <a href="https://www.instagram.com/p/Ce5SJelpY5e/?utm_source=ig_web_copy_link&igshid=MmJiY2I4NDBkZg=="><h4>ElectricBlue</h4></a>
+                    </div>
+            </div>
+        </div>
+        <!-- 3-4(눈올 때)-->
+        <!--3-5(천둥번개 칠 때 색깔 추가 ) -->
+
+        <!--3-6 안개 낄 때-->
+        <div class="color-mist container">
+            <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3 BrightWhite colorimg">
+                        <img src="../images/Color/BrightWhite.png" alt="">
+                        <a href="https://www.instagram.com/p/CtLTU5mpL5w/"><h4>BrightWhite</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 VivaMagenta colorimg">
+                        <img src="../images/Color/VivaMagenta.png" alt="">
+                        <a href="https://www.instagram.com/p/CtLTU5mpL5w/"><h4>VivaMagenta</h4></a> 
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 Veryperi colorimg">
+                        <img src="../images/Color/veryperi.png" alt="">
+                        <a href="https://www.instagram.com/stories/highlights/17904982664417841/"><h4>Veryperi</h4></a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 SendDaller colorimg">
+                        <img src="../images/Color/SendDaller.png" alt="">
+                        <a href="https://www.instagram.com/p/CskpKwpJyaL/"><h4>SendDaller</h4></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+     <!-- 4. 배경  -->
