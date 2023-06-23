@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/ClothInfo2.css">
-
     <link rel="stylesheet" href="../CSS/nav.css">
     <!-- <link rel="stylesheet" href="../CSS/responsivheader.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
@@ -52,25 +51,27 @@
     </script>
 </head>
 <body>
+    <!-- 1. header바 -->
     <nav class="navbar">
-        <!-- 로고 -->
+        <!-- 1-1. 로고 -->
         <span class="navbar_logo">
             <img src="../images/Icon/핏북로고little.png" alt="">
             <a href="#"></a>   
         </span>
 
-        <!-- 메뉴 -->
+        <!-- 1-2. 메뉴 -->
         <ul class="navbar_menu">
-            <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
-            <li class="nav-item"><a href="" class="nav-link">오늘의 색</a></li>
+            <li class="nav-item"><a href="responsiveheather.html" class="nav-link">홈</a></li>
+            <li class="nav-item"><a href="todayscolor.html" class="nav-link">오늘의 색</a></li>
             <li class="nav-item"><a href="ClothInfo.html" class="nav-link">옷 정보 수정</a></li>
-            <li class="nav-item"><a href="" class="nav-link">옷 사러가기</a></li>
+            <li class="nav-item"><a href="../mart/index.html" class="nav-link">옷 사러가기</a></li>
         </ul>
-        <!-- 링크 -->
+        <!-- 1-3. 링크 -->
         <div class="navbar_links" id="nav_toggle">
             <i class="bi bi-list"></i>
         </div>
     </nav>
+    <!-- 1-4.header바 js -->
     <script type="text/JavaScript">
         const navToggle = document.getElementById("nav_toggle");
         const navToggleI = nav_toggle.getElementsByTagName("i")[0];
@@ -88,13 +89,21 @@
             navListUl.classList.toggle("show-menu");
         };
     </script> 
-    <div class=items>
+    <div class="grid">
+        <div class=items>
+            <i class="bi bi-person-circle"></i>
+            <h4 class="nametext1">admin의 옷장</h4>
+        </div>
+        
+    </div>
+
+    <!-- <div class=items>
         <i class="bi bi-person-circle"></i>
         <h4 class="nametext1">admin의 옷장</h4>
-    </div>
+    </div> -->
    <!--드롭다운 메뉴 https://ungdoli0916.tistory.com/784-->
    <!-- json파일 만들어서 넣거나 값을 자식창에 넣어놓기  -->
-    <div class="menu">
+    <!-- <div class="menu">
         <button class="accordion">상의 </button>
             <div class="panel"> 
                 <input type="image" src="../images/상의/T001.jpg" onclick="openChild()" style="width:100px; height:100px"></input> 
@@ -123,7 +132,7 @@
             <input type="image" src="../images/신발/S006.jpg" style="width:100px; height:100px"></input> 
 
         </div>
-    </div>
+    </div> -->
     <!-- //아코디언 메뉴 스크립트(지우지 말것!) -->
     <script>
         var acc = document.getElementsByClassName("accordion");

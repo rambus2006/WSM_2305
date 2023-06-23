@@ -1,82 +1,91 @@
+/* 0. 기본 설정 */
 body{
-    background-color: #F6EBE2;
-    margin: 0;
-    padding: 0;
+  background-color: #F6EBE2;
+  margin: 0;
+  padding: 0;
 }
 a{
-    text-decoration: none;
-    color:white;
-    
+  text-decoration: none;
+  color:white;
+  
 }
 li{list-style:none}
 
-/*3 사이드바 하위메뉴*/
-
+/*1 사이드바 하위메뉴*/
+/* 
 .clothmenu {
-  position: absolute;
-  width: 1800px;
-  overflow: hidden;
-  margin: 100px auto;
-  
-  background-color: white;
+position: absolute;
+width: 1800px;
+overflow: hidden;
+margin: 100px auto;
+
+background-color: white;
 }
 
 .clothmenu > li {
-  width: 100%;
-  text-align: center;
-  line-height: 40px;
-  background-color: #fff;
-  color: black;
-}
+width: 100%;
+text-align: center;
+line-height: 40px;
+background-color: #fff;
+color: black;
+} 
 
 .clothmenu a {
-  color: #fff;
+color: #fff;
 }
 
 .submenu > li {
-  line-height: 50px;
-  background-color: #94a9ff;
+line-height: 50px;
+background-color: #94a9ff;
 }
 
 .submenu {
-  height: 0; /*ul의 높이를 안보이게 처리*/
+height: 0; /*ul의 높이를 안보이게 처리
 overflow: hidden;
 }
 .clothmenu > li:hover {
-  background-color: #94a9ff;
-  transition-duration: 0.5s;
+background-color: #94a9ff;
+transition-duration: 0.5s;
 }
 
 .clothmenu > li:hover .submenu {
-  height: 250px; /*서브메뉴 li한개의 높이 50*5*/
-  transition-duration: 1s;
-}
+height: 250px; /*서브메뉴 li한개의 높이 50*5
+transition-duration: 1s;
+} */
 /*4. 프로필 사진 및 수정*/
 /*4-1 프로필 사진*/
-.Profile{
+/* .Profile{
   background-color: #F6EBE2;
 }
 .Profile i{
-    top:120px;
-    left: 50px;
-    position: relative;
-    font-size: 100px;
-    color:black;
-    visibility: visible;
-    display: block;
+  top:120px;
+  left: 50px;
+  position: relative;
+  font-size: 100px;
+  color:black;
+  visibility: visible;
+  display: block;
 
 }
 .Profile h1{
-    position: relative;
-    top:10px;
-    left: 100px;
-    padding-left: 140px;
-    padding-top: 40px;
-    display:block;
+  position: relative;
+  top:10px;
+  left: 100px;
+  padding-left: 140px;
+  padding-top: 40px;
+  display:block;
 }
 .menu{
   top:100px;
   position: relative;
+} */
+/* 1. 상단 프로필과 프로필제목 */
+.items>i{
+
+}
+/* 프로필 사진 옆 텍스트 위치  */
+.nametext1{
+  top:10px;
 }
 
 @media (max-width:992px) {
@@ -165,17 +174,17 @@ overflow: hidden;
 
 
 @media (max-width:768px) {
-    body{
-        background-color: #F6EBE2;
-        margin: 0;
-        padding: 0;
-    }
-    a{
-        text-decoration: none;
-        color:white;
-        
-    }
-    li{list-style:none}
+        body{
+            background-color: #F6EBE2;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            
+        }
+        li{list-style:none} 
     
         /*3 사이드바 하위메뉴*/
         
@@ -199,15 +208,15 @@ overflow: hidden;
         .clothmenu a {
           color: #fff;
         }
-    
+     
         .submenu > li {
           line-height: 50px;
           background-color: #94a9ff;
         }
     
         .submenu {
-          height: 0; /*ul의 높이를 안보이게 처리*/
-        overflow: hidden;
+          height: 0;/* ul의 높이를 안보이게 처리 */
+          overflow: hidden; 
         }
         .clothmenu > li:hover {
           background-color: #94a9ff;
@@ -215,7 +224,7 @@ overflow: hidden;
         }
     
         .clothmenu > li:hover .submenu {
-          height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+          height: 250px; /*서브메뉴 li한개의 높이 50*5 */
           transition-duration: 1s;
         }
     /*4. 프로필 사진 및 수정*/
@@ -329,5 +338,5 @@ overflow: hidden;
             transition: max-height 0.2s ease-out;
             border-bottom: 1px solid #eeeeee;
         }
-        /*Cloth.css에 요소*/
+
 }
