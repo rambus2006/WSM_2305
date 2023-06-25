@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/Introducepage.css">
+
+</head>
+<body>
+    <!-- 1. 헤더바 -->
+    <nav class="navbar">
+        <!--1-1. 로고 -->
+        <span class="navbar_logo">
+            <img src="../images/Icon/핏북로고little.png" alt="">
+            <a href="#"></a>   
+        </span>
+
+        <!--1-2. 메뉴 -->
+        <ul class="navbar_menu">
+            <li class="nav-item"><a href="Introducepage.html" class="nav-link">소개</a></li>
+            <li class="nav-item"><a href="Home.html" class="nav-link">홈</a></li>
+            <li class="nav-item"><a href="todayscolor.html" class="nav-link">오늘의 색</a></li>
+            <li class="nav-item"><a href="ClothInfo.html" class="nav-link">옷 정보 수정</a></li>
+            <li class="nav-item"><a href="../mart/index.html" class="nav-link">옷 사러가기</a></li>
+        </ul>
+        <!--1-3. 링크 -->
+        <div class="navbar_links" id="nav_toggle">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+    <!-- 1-4. 헤더바 기능 -->
+    <script type="text/JavaScript">
+        const navToggle = document.getElementById("nav_toggle");
+        const navToggleI = nav_toggle.getElementsByTagName("i")[0];
+        const navListUl = document.getElementsByClassName("navbar_menu")[0];
+
+        console.log(navToggleI);
+        console.log(navListUl);
+        //.nav-toggle클릭하면
+        nav_toggle.onclick=()=>{
+            //.nav-toggle i 햄버거메뉴 <-> X
+            //클래스에서 bi-list <-> bi-x-lg
+            navToggleI.classList.toggle("bi-list");
+            navToggleI.classList.toggle("bi-x-lg");
+            //.nav-list .show-menu toggle
+            navListUl.classList.toggle("show-menu");
+        };
+    </script> 
+    <div id="grid" class="back">
+        <!-- 3-2.간단한 소개 -->
+        <div class="intro">
+            <h1 class="introtitle">핏북이란?</h1>
+            <h6 class="introtitle2"> 핏북은 날씨와 사용자의 기분에 따른 <br>의상추천코디서비스를 제공합니다.<br>
+                자신이 보유 중인 옷들의 데이터를 활용하여<br> 옷을 관리할 수 있도록 도와줍니다. 
+            </h6>
+        </div>
+        <!-- 3-3.기능소개(간단히) -->
+        <div class="fun">
+            <h1 class="funtitle">핏북의 기능</h1>
+            <h6 class="funtitle2">실시간 날씨로 추천받는 코디 컬러</h6>
+            <h6 class="funtitle3">간단한 심리테스트로 알아보는 나만의 컬러채도</h6>
+            <h6 class="funtitle4">한눈에 볼 수 있는 나만의 옷장</h6>
+        </div>
+    </div>
+
+</body>
+</html>

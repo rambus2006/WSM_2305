@@ -1,0 +1,70 @@
+:root{
+    --first-color:#9a7b57;
+    --second-color: #F6EBE2;
+}
+body{
+    margin:0;
+    padding:0;
+}
+
+/*1. 헤더바*/
+/*1-2 header>nav태그(navbar클래스) */
+.navbar{
+    margin:0;
+    display:flex;
+    position: absolute;
+    justify-content: space-between;
+    background-color: var(--first-color);
+    height: 50px;
+    width:100%;
+    z-index: 1;
+   
+}
+.navbar_reply{
+    position: absolute;
+    margin:0;
+    padding:0;
+    left: 16px;
+    top:8px;
+    color:white;
+    font-size: 24px;
+}
+
+
+@media screen and (max-width:992px) {
+    .navbar{
+        /* justify-content: space-between; */
+        margin:0;
+        padding:0;
+
+    }
+
+}
+/* 모바일  */
+@media screen and (max-width:768px) {
+    .navbar{
+        justify-content: space-between;
+        margin:0;
+        padding:0;
+    }
+    /*[moblie] M-1-5 nav 클래스>안에 있는메뉴들*/
+    .navbar_menu {
+        margin-left: 0;
+        padding-left: 0;
+        z-index: -1;
+        position: absolute; /*포지션을 통해 부모값인 reletive를 기준으로 절댓값, 위 없으니까 헤더바 컨테이너에서 분리됨*/
+        
+        right:0; /*한 줄당 너비가 오른쪽 끝까지 넓어짐 */
+        left:0; /* 한 줄당 너비가 왼쪽 끝까지*/
+
+        flex-direction: column; /* nav-item 수직정렬*/
+        text-align: center; /*차지하는 크기는 똑갔지만 가운데 정렬*/
+        background-color:var(--second-color);
+        top:40px;
+        height:0;
+        transition: all 0.4s;
+        overflow: hidden; 
+    
+    }
+
+}

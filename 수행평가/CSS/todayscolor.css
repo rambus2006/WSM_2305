@@ -1,0 +1,235 @@
+body{
+    margin:0;
+    padding:0;
+}
+/* 2-1-1.질문 */
+.suvhead{
+    background-color: white;
+    top:100px;
+    font-size: 20pt;
+    position: relative;
+    display: flex;
+    justify-content : center;
+    align-items:center;
+}
+
+.groupoption>h4{
+    line-height: 300px;
+    text-align: center;
+    display: inline;
+    position: absolute;
+}
+/* 2-1-2. 체크박스 크기설정 */
+.radios{
+    column-gap: 14em;
+}
+
+.radios{
+    position: relative;
+    display: flex;
+    justify-content : center;
+    align-items:center;
+    top:200px;
+    background-color: white;
+    column-gap:5em;
+    height:200px;
+}
+.radio1{
+    width: 80px;
+    height:80px;
+}
+.radio2{
+    display: table-cell;
+    width:60px;
+    height:60px;
+    vertical-align: middle;
+}
+.radio3{
+    display: table-cell;
+    width:30px;
+    height:30px;
+    vertical-align: middle;
+}
+/* 2-1-3.질문 */
+.q1{
+    position:relative;
+    top:180px;
+    text-align: center;
+}
+
+/* 2-1-4.체크박스위의 텍스트 */
+.suvtexter{
+    position: relative;
+    text-align: center;
+    justify-content:space-between;
+    background-color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    word-spacing: 30em;
+}
+/* 2-2.결과 확인하는 버튼 */
+.result{
+    text-align: center;
+}
+.resultbtn{
+    position: relative;
+    top:200px;
+}
+
+/* [반응형: 태블릿] */
+@media screen and (max-width:992px) {
+    body{
+        margin:0;
+        padding:0;
+    }
+    /* T_2-1-1.질문 */
+    .suvhead{
+        background-color: white;
+        top:100px;
+        font-size: 20pt;
+        position: relative;
+        display: flex;
+        justify-content : center;
+        align-items:center;
+    }
+
+
+    /*T_ 2-1-1.질문 */
+    .groupoption>h4{
+        line-height: 300px;
+        text-align: center;
+        display: inline;
+        position: absolute;
+    
+    }
+    /* T_2-1-2. 라디오박스 크기설정 */
+    .radios{
+        column-gap: 10em;
+        position: relative;
+        display: flex;
+        justify-content : center;
+        align-items:center;
+        top:200px;
+        background-color: white;
+        column-gap:5em;
+        height:200px;
+    }
+    .radio1{
+        width: 80px;
+        height:80px;
+    }
+    .radio2{
+        display: table-cell;
+        width:60px;
+        height:60px;
+        vertical-align: middle;
+    }
+    .radio3{
+        display: table-cell;
+        width:30px;
+        height:30px;
+        vertical-align: middle;
+    }
+    /* T_2-1-4.체크박스위의 텍스트(매우좋음,매우나쁨) */
+    .suvtexter{
+        position: relative;
+        text-align: center;
+        justify-content:space-between;
+        background-color: white;
+        font-family: 'Noto Sans KR', sans-serif;
+        word-spacing: 30em;
+    }
+    /* T_2-1-3.질문 */
+    .q1{
+        position:relative;
+        top:180px;
+        text-align: center;
+    }
+    /* T_2-2.결과 확인하는 버튼 */
+    .result{
+        text-align: center;
+    }
+    .resultbtn{
+        position: relative;
+        top:200px;
+    }
+}
+/* [반응형]모바일 */
+@media screen and (max-width:768px) {
+    /* M_2-1-1.질문 */
+    .suvhead{
+        background-color: white;
+        top:100px;
+        font-size: 20pt;
+        position: relative;
+        display: flex;
+        justify-content : center;
+        align-items:center;
+    }
+ 
+    /*M_ 2-1-1.질문 */
+    .groupoption{
+        margin: 0;
+        padding: 0;
+    }
+    .groupoption>h4{
+        margin:0;
+        padding: 0;
+        line-height: 300px;
+        text-align: center;
+        display: inline;
+        position: absolute;
+    
+    }
+    /* M_2-1-2. 라디오박스 크기설정 */
+    .radios{
+        position: relative;
+        display: flex;
+        justify-content : center;
+        align-items:center;
+        top:200px;
+        background-color: white;
+        column-gap: 20px;
+        height:200px;
+    }
+    .radio1{
+        width: 80px;
+        height:80px;
+    }
+    .radio2{
+        display: table-cell;
+        width:60px;
+        height:60px;
+        vertical-align: middle;
+    }
+    .radio3{
+        display: table-cell;
+        width:30px;
+        height:30px;
+        vertical-align: middle;
+    }
+    /* T_2-1-4.체크박스위의 텍스트(매우좋음,매우나쁨) */
+    .suvtexter{
+        position: relative;
+        text-align: center;
+        justify-content:space-between;
+        background-color: white;
+        font-family: 'Noto Sans KR', sans-serif;
+        word-spacing: 300px;
+    }
+    /*M_2-1-3.질문 */
+    .q1{
+        position:relative;
+        top:180px;
+        text-align: center;
+    }
+    /* M_2-2.결과 확인하는 버튼 */
+    .result{
+        text-align: center;
+    }
+    .resultbtn{
+        position: relative;
+        top:200px;
+
+    }
+
+}

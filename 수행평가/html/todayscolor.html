@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/todayscolor.css">
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <title>오늘의 색</title>
+</head>
+<body>
+    <!-- 1. 헤더바 -->
+    <nav class="navbar">
+        <!--1-1. 로고 -->
+        <span class="navbar_logo">
+            <img src="../images/Icon/핏북로고little.png" alt="">
+            <a href="#"></a>   
+        </span>
+
+        <!--1-2. 메뉴 -->
+        <ul class="navbar_menu">
+            <li class="nav-item"><a href="Introducepage.html" class="nav-link">소개</a></li>
+            <li class="nav-item"><a href="Home.html" class="nav-link">홈</a></li>
+            <li class="nav-item"><a href="todayscolor.html" class="nav-link">오늘의 색</a></li>
+            <li class="nav-item"><a href="ClothInfo.html" class="nav-link">옷 정보 수정</a></li>
+            <li class="nav-item"><a href="../mart/index.html" class="nav-link">옷 사러가기</a></li>
+        </ul>
+        <!--1-3. 링크 -->
+        <div class="navbar_links" id="nav_toggle">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+    <!-- 1-4. 헤더바 기능 -->
+    <script type="text/JavaScript">
+        const navToggle = document.getElementById("nav_toggle");
+        const navToggleI = nav_toggle.getElementsByTagName("i")[0];
+        const navListUl = document.getElementsByClassName("navbar_menu")[0];
+
+        console.log(navToggleI);
+        console.log(navListUl);
+        //.nav-toggle클릭하면
+        nav_toggle.onclick=()=>{
+            //.nav-toggle i 햄버거메뉴 <-> X
+            //클래스에서 bi-list <-> bi-x-lg
+            navToggleI.classList.toggle("bi-list");
+            navToggleI.classList.toggle("bi-x-lg");
+            //.nav-list .show-menu toggle
+            navListUl.classList.toggle("show-menu");
+        };
+    </script> 
+    <!-- 2. check박스 폼 -->
+    <div class="survey">
+        <!-- 2-1.질문-->
+        <div class="suvhead"><h4 id="suvtext">당신의 기분에 맞는 색을 추천해드릴게요</h4></div>
+        <div class="groupoption">
+            <!-- 2-1-3.질문 -->
+            <div class="q1">오늘 당신의 컨디션은?</div>
+            <div class="radios">
+                 <!-- 2-1-2.라디오박스 -->
+                <input name="radio1" class="radio1" type="radio" value="1"> 
+                <input name="radio1" class="radio2" type="radio" value="2">
+                <input name="radio1" class="radio3" type="radio" value="3">
+                <input name="radio1" class="radio2" type="radio" value="4">
+                <input name="radio1" class="radio1" type="radio" value="5">
+            </div>
+            <!-- 2-1-4.라디오박스 위의 텍스트 -->
+            <div class="suvtexter">
+                매우좋음 매우나쁨
+            </div>
+        </div>
+        <!-- 2-2.결과 확인하기 -->
+        <div class="result">
+            <input type="button" value="결과 확인하기" class="resultbtn" onclick="openChild()">
+        </div>
+        <!-- 2-3. check박스의 값에 따라 다른 자식창 열기 -->
+        <script>
+            function openChild() {
+                // 체크된 값 가져오기
+                const v1= document.querySelector('input[type=radio][name=radio1]:checked').value;
+                switch(v1){
+                    case "1":
+                        // window.name = "부모창 이름"; 
+                        window.name = "todayscolor.html";
+                                    // window.open("open할 window", "자식창 이름", "팝업창 옵션");
+                        openWin = window.open("ResultY1.html", "BrightYellow");  
+                        break;
+                    case "2":
+                        // window.name = "부모창 이름"; 
+                        window.name = "todayscolor.html";
+                                    // window.open("open할 window", "자식창 이름", "팝업창 옵션");
+                        openWin = window.open("ResultY2.html", "lemonYellow");  
+                        break;
+                    case "3":
+                        // window.name = "부모창 이름"; 
+                        window.name = "todayscolor.html";
+                                    // window.open("open할 window", "자식창 이름", "팝업창 옵션");
+                        openWin = window.open("ResultY3.html", "BrightYellow");  
+                        break;
+                    case "4":
+                        // window.name = "부모창 이름"; 
+                        window.name = "todayscolor.html";
+                                    // window.open("open할 window", "자식창 이름", "팝업창 옵션");
+                        openWin = window.open("ResultY4.html", "BrightYellow");  
+                        break;
+                    case "5":
+                        // window.name = "부모창 이름"; 
+                        window.name = "todayscolor.html";
+                                    // window.open("open할 window", "자식창 이름", "팝업창 옵션");
+                        openWin = window.open("ResultY5.html", "BrightYellow");  
+                        break;
+                }
+ 
+            }
+        </script>
+    </div>
+
+</body>
+</html>

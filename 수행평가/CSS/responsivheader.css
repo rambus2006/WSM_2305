@@ -1,0 +1,149 @@
+body{
+    overflow-y: hidden
+}
+/* 1.상단(날씨 API, colorcomment) */
+/* 1-1. 날씨에 다른 이미지 화면  */
+.weather img{
+    height:60vh;
+    
+}
+/* 1-2. 오늘은 노란색입니다. 문구 */
+#colorcommentY{
+    position: relative;
+    width:48vw;
+    height:46vh;
+    left:200px;
+
+}
+
+/* 2. 하단(소개,기능) */
+#grid{
+  position: relative;
+  overflow-x: hidden;
+  display:grid;
+  top:8vh;
+  grid-template-rows:26em 40em;
+}
+/* admin's closet 글씨 */
+.text{
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.weathercast{
+    background-color: #F6EBE2;
+    padding-left:18%;
+}
+/* 날씨 정보  */
+.font{
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 200%;
+}
+.clothre{
+    background-color: white;
+}
+
+.clothreccomend{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.tshirt{
+    top:0;
+    width:200px;
+    height:300px;
+    margin-left: 20%;
+    margin-top:40px;
+    
+}
+.clothreccomend{
+  grid-template-columns:40em 60em;
+  margin-top:40px;
+  column-gap:2%;
+  overflow-y: hiddens
+}
+.cloth1{
+    background-color: white;
+    width: 20em;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px;
+    margin:10px;
+}
+.cloth1>ul{
+    padding-left:40px;
+}
+.clothtitle{
+    text-align: center;
+}
+/* 탭 */
+@media screen and (max-width:992px) {
+    body{
+        overflow-y: hidden
+    }
+    /* 상단 */
+    .weather img{
+        height:60vh;
+        background-size: contain;
+    }
+    #colorcommentY{
+        width:60vw;
+        height:32vh;
+        left:10%;
+        
+    }
+    /* 2. 하단(소개,기능) */
+    #grid{
+        position: relative;
+        display:grid;
+        top:7vh;
+        grid-template-rows:20em 24em 30em;
+    }
+    .weathercast{
+        background-color: #F6EBE2;
+        padding-left:10%;
+    }
+    .font{
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 180%;
+
+    }
+    .clothreccomend{
+        display:flex;
+        flex-wrap: wrap;
+        overflow-y: hidden
+    }
+}
+/* 모바일 */
+@media screen and (max-width:768px) {
+    /* 사진 밑 내용이 들어갈 컨테이너 */
+    /* 1. 상단 */
+    .weather img{
+        height:40vh;
+        background-size: contain;
+    }
+    #colorcommentY{
+        position: relative;
+        width:60vw;
+        height:20vh;
+       
+    }
+    /* 하단(소개,기능) */
+    #grid{
+        position: relative;
+        display:grid;
+        top:5vh;
+        grid-template-rows:16em 60em;
+    }
+    .weathercast{
+        background-color: #F6EBE2;
+        padding-left:8%;
+    }
+    .font{
+        font-family: 'Dancing Script', cursive;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 160%;
+    }
+
+}

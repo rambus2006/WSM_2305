@@ -1,0 +1,244 @@
+/* 2. 하단(소개,기능) */
+#grid{
+    position: relative;
+
+    display:grid;
+    top:5vh;
+    grid-template-rows:26em 30em 30em;
+  }
+  .intro{
+    position: relative;
+    background-color: white;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 24pt;
+  }
+  .introtitle{
+    position: absolute;
+    left:300px;
+    animation:introtitle 1s ease-out;
+  }
+  .introtitle2{
+    position: absolute;
+    left:300px;
+    top:20%;
+    animation:introtitle 1s ease-out;
+  }
+  .fun{
+    
+    position: relative;
+    background-color: white;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 24pt;
+    
+  }
+  .funtitle{
+    right: 300px;
+    position: absolute;
+    animation:introtitle2 0.4s ease-out;
+  }
+  .funtitle2{
+    top:20%;
+    right: 300px;
+    position: absolute;
+    animation:introtitle2 0.6s ease-out;
+  }
+  .funtitle3{
+    top:25%;
+    right: 300px;
+    position: absolute;
+    animation:introtitle2 0.8s ease-out;
+  }
+  .funtitle4{
+    top:30%;
+    right: 300px;
+    position: absolute;
+    animation:introtitle2 1s ease-out;
+  }
+  @keyframes introtitle{
+    from{
+        left:-100px;
+        opacity: 0;
+    }
+    to{
+        left:300px;
+        opacity: 1;
+    }
+  }
+  @keyframes introtitle2{
+    from{
+        animation-delay: 10s;
+        right:-100px;
+        opacity: 0;
+        animation-delay: 1s;
+    }
+    to{
+
+        right:300px;
+        opacity: 1;
+        
+    }
+  }
+
+  @media screen and (max-width:992px) {
+    /* 2. 하단(소개,기능) */
+#grid{
+  position: relative;
+
+  display:grid;
+  top:5vh;
+  grid-template-rows:26em 30em 30em;
+}
+.intro{
+  position: relative;
+  background-color: white;
+  font-family: 'Gothic A1', sans-serif;
+  font-size: 24pt;
+}
+.introtitle{
+  position: absolute;
+  left:200px;
+  animation:introtitle 1s ease-out;
+}
+.introtitle2{
+  position: absolute;
+  left:200px;
+  top:20%;
+  animation:introtitle 1s ease-out;
+}
+.fun{
+  
+  position: relative;
+  background-color: white;
+  font-family: 'Gothic A1', sans-serif;
+  font-size: 24pt;
+  
+}
+.funtitle{
+  right: 200px;
+  position: absolute;
+  animation:introtitle2 0.4s ease-out;
+}
+.funtitle2{
+  top:20%;
+  right: 200px;
+  position: absolute;
+  animation:introtitle2 0.6s ease-out;
+}
+.funtitle3{
+  top:25%;
+  right: 200px;
+  position: absolute;
+  animation:introtitle2 0.8s ease-out;
+}
+.funtitle4{
+  top:30%;
+  right: 200px;
+  position: absolute;
+  animation:introtitle2 1s ease-out;
+}
+@keyframes introtitle{
+  from{
+      left:-100px;
+      opacity: 0;
+  }
+  to{
+      left:200px;
+      opacity: 1;
+  }
+}
+@keyframes introtitle2{
+  from{
+      animation-delay: 10s;
+      right:-100px;
+      opacity: 0;
+      animation-delay: 1s;
+  }
+  to{
+
+      right:200px;
+      opacity: 1;
+      
+  }
+}
+}
+@media screen and (max-width:768px) {
+  #grid{
+    position: relative;
+  
+    display:grid;
+    top:5vh;
+    grid-template-rows:26em 30em 30em;
+  }
+  .intro{
+    position: relative;
+    background-color: white;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 24pt;
+  }
+  .introtitle{
+    position: absolute;
+    left:60px;
+    animation:introtitle 1s ease-out;
+  }
+  .introtitle2{
+    position: absolute;
+    left:50px;
+    top:20%;
+    animation:introtitle 1s ease-out;
+  }
+  .fun{
+    
+    position: relative;
+    background-color: white;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 24pt;
+    
+  }
+  .funtitle{
+    right: 10px;
+    position: absolute;
+    animation:introtitle2 0.4s ease-out;
+  }
+  .funtitle2{
+    top:20%;
+    right: 10px;
+    position: absolute;
+    animation:introtitle2 0.6s ease-out;
+  }
+  .funtitle3{
+    top:25%;
+    right: 10px;
+    position: absolute;
+    animation:introtitle2 0.8s ease-out;
+  }
+  .funtitle4{
+    top:30%;
+    right: 10px;
+    position: absolute;
+    animation:introtitle2 1s ease-out;
+  }
+  @keyframes introtitle{
+    from{
+        left:-60px;
+        opacity: 0;
+    }
+    to{
+        left:60px;
+        opacity: 1;
+    }
+  }
+  @keyframes introtitle2{
+    from{
+        animation-delay: 10s;
+        right:-100px;
+        opacity: 0;
+        animation-delay: 1s;
+    }
+    to{
+  
+        right:5px;
+        opacity: 1;
+        
+    }
+  }
+}
