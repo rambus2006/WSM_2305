@@ -1,0 +1,182 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>핏북,당신의 옷장을 책임져드립니다.</title>
+     <link rel="stylesheet" href="../CSS/nav.css">
+     <link rel="stylesheet" href="../CSS/responsivheader.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+</head>
+ <body>
+    <!-- 1. 헤더바 -->
+    <nav class="navbar">
+        <!--1-1. 로고 -->
+        <span class="navbar_logo">
+            <img src="../images/Icon/핏북로고little.png" alt="">
+            <a href="#"></a>   
+        </span>
+
+        <!--1-2. 메뉴 -->
+        <ul class="navbar_menu">
+            <li class="nav-item"><a href="Introducepage.html" class="nav-link">소개</a></li>
+            <li class="nav-item"><a href="Home.html" class="nav-link">홈</a></li>
+            <li class="nav-item"><a href="todayscolor.html" class="nav-link">오늘의 색</a></li>
+            <li class="nav-item"><a href="ClothInfo.html" class="nav-link">옷 정보 수정</a></li>
+            <li class="nav-item"><a href="../mart/index.html" class="nav-link">옷 사러가기</a></li>
+        </ul>
+        <!--1-3. 링크 -->
+        <div class="navbar_links" id="nav_toggle">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+    <!-- 1-4. 헤더바 기능 -->
+    <script type="text/JavaScript">
+        const navToggle = document.getElementById("nav_toggle");
+        const navToggleI = nav_toggle.getElementsByTagName("i")[0];
+        const navListUl = document.getElementsByClassName("navbar_menu")[0];
+
+        console.log(navToggleI);
+        console.log(navListUl);
+        //.nav-toggle클릭하면
+        nav_toggle.onclick=()=>{
+            //.nav-toggle i 햄버거메뉴 <-> X
+            //클래스에서 bi-list <-> bi-x-lg
+            navToggleI.classList.toggle("bi-list");
+            navToggleI.classList.toggle("bi-x-lg");
+            //.nav-list .show-menu toggle
+            navListUl.classList.toggle("show-menu");
+        };
+    </script> 
+    <script>
+        //2. 날씨 API
+        //2-1.실시간으로 날씨 데이터 가져오기
+     $.getJSON('https://api.openweathermap.org/data/2.5/weather?id=1835848&appid=445b3cd606b8d39b7e81eb4afdc9f694',function(data){
+         
+         var $now = new Date($.now());
+         var $minTemp = data.main.temp_min;
+         var $maxTemp = data.main.temp_max;
+         var $cTemp = data.main.temp;
+         var $cDate = ($now.getFullYear()+'-'+($now.getMonth()+1) + '-' + $now.getDate() + '/' + $now.getHours() + '시' + $now.getMinutes()+'분 ');
+        //  var $wIcon = data.weather[0].icon;
+         var $now = new Date($.now());
+        
+         var $weather = data.weather[0].main;
+        //  var $CTemp=(double)(cTemp−273.15);
+
+        //  var $ctemp2 = ($ctemp-32)/1.8;
+         $("default").show();
+         //2-2.배경 이미지 숨김
+            $("#mist").hide();
+            $("#rain").hide();
+            $("#cloud").hide();
+            $("#thunder").hide();
+            $("#snow").hide();
+            $("#default").hide();
+            $("#clear").hide();
+        
+        //2-3. 색깔 숨기기
+
+        $(".color-clear").hide();
+        $(".color-cloud").hide();
+        $(".color-rain").hide();
+        $(".color-mist").hide();
+            
+         //2-4.날씨에 맞게 배경이미지 보이게 하기 
+         if ($weather=="Clear") {
+             $("#clear").show();
+             $(".color-clear").show();
+         }
+         if($weather=="Clouds"){
+             $("#cloud").show();
+             $(".color-cloud").show();
+         }
+         if($weather=="Rain"){
+             $("#rain").show();
+             $(".color-rain").show();
+         }
+         if($weather=="Snow"){
+             $("#snow").show();
+         }
+         if($weather=="Thunderstorm"){
+             $("#thunder").show();
+         }
+         if($weather=="Mist"){
+            $("#mist").show();
+            $(".color-mist").show();
+         }
+         
+         //출력
+         $('.clowtemp').append($minTemp+'(섭씨)');
+         $('.weatherfor').append($weather);
+         $('.ctemp').append($cTemp+'(섭씨)');
+         $('.chightemp').append($maxTemp+'(섭씨)');
+         $('.date').prepend($cDate);
+        
+     });
+     </script>
+
+
+<!--2-5. 날씨에 따라 변하는 이미지-->
+     <div class="weather">
+        <!--2-6배경화면 이미지 맨 위에 있는 게 로드되기 전 기본값 -->
+        <img src="../images/Photo/white.png" id="default" alt="" >
+        <!--2-7.날씨에 따른 이미지-->
+        <img src="../images/Photo/clear.jpg" id="clear" alt=""  >
+        <img src="../images/Photo/clouds.jpg" id="cloud" alt=""> <!--웜톤-->
+        <img src="../images/Photo/rain.jpg" id="rain" alt="" >
+        <img src="../images/Photo/snow.jpg" id="snow" alt="" >
+        <img src="../images/Photo/thunderstorm.jpg" id="thunder" alt="" >
+        <img src="../images/Photo/mist.jpg" id="mist" alt="" >
+     </div>
+   
+    
+    <!-- 3.사진 밑내용이 들어갈 컨테이너 -->
+    <div id="grid">
+        <div class="colorcomment">
+            <!--3-1.오늘의 색 문구(노란색기준)-->
+           <img src="../images/Photo/yellowcomment.png" alt="" id="colorcommentY">
+        </div>
+        <!-- <div class="weathercast">
+            <h2 class="date font"></h2>
+            <h2 class="font">날씨정보</h2>-->
+            <!-- <div class="weatherfor font">현재 날씨:</div> -->
+            <!--<div class="ctemp font">현재 온도: </div>
+            <div class="clowtemp font">최저 온도: </div>
+            <div class="chightemp font">최고 온도: </div>
+        </div> -->
+        <div class="clothre">
+            <h1 class="clothtitle">오늘의 추천</h1>
+            <div class="clothreccomend">
+                <div class="cloth1">
+                    <a href="T001.html"><img class="tshirt" src="../옷 자료/노란색 옷3.jpg " alt=""></a>
+                    <ul class="T001Text">
+                        <li>이름: 노란색 트렌치 코트 </li>
+                        <li>위치: 옷장 5번째 서랍</li>
+                    </ul>
+                </div>
+                <div class="cloth1">
+                    <a href="T002.html"><img class="tshirt" src="../옷 자료/pants.jpg" alt=""></a>
+                    <ul>
+                        <li>이름: 노란 울 바지</li>
+                        <li>위치: 옷장 6번째 서랍</li>
+                    </ul>
+                </div>
+                <div class="cloth1">
+                    <a href="T003.html"><img class="tshirt" src="../옷 자료/노란색 옷3(구두).jpg" alt=""></a>
+                    <ul>
+                        <li>이름: 노란 하이힐 구두</li>
+                        <li>위치: 신발장 6번째 서랍</li>
+                    </ul>
+                </div>
+            </div>
+            
+
+        
+
+        </div>
+    </div>
+ </body>
+ </html>

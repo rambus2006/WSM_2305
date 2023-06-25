@@ -1,31 +1,18 @@
-<!-- 해야 할 일
-    1. 반응형 header바가 너무 복잡=>더 단순하게 바꾸기 (수업시간에 배운 걸로 해결-> js가 값을 지정하지 못하는 문제발생)
-    2. 헤더 요소 벌리기 -> 해결(absolue로 바꾸로 left, right로 위치 조정하니 해결)
-    3. 3-4(눈올 때),3-5(천둥번개 칠 때 색깔 추가 )
-    4. json파일로 자식창에 값 전달하기(형식은 그대로, 데이터만 바꾸기)
-    5. 자식창 반응형으로 만들기 
-    --1차 완성---------------------------
-    <시간이 되면>
-    1. 홈화면 내용 더 넣기 (날씨 색에 대한 심리학 설명페이지 제작(json파일로 데이터와 배경색만 바꾸기)-오늘의 색)
-    2. 날씨 색 추가&바꾸기,a태그 바꾸기) - 어도비 컬러 이용
-    3.오늘의 색 부분 설문조사식으로 바꿔서 결과값 나오게 하기 
-    ---
-    - 화면의 크기 
-    
--->
+<!-- 로그인 페이지 -->
 <html>
     <head>
         <title>Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     </head>
     <body>
-        
         <div id="loginform">
+            <!-- 로그인 글씨 -->
             <h1><i>Login</i></h1>
+            <!-- 로그인폼 -->
             <form name="form" >
                 <div class="userid">
                     <label>Username: </label>
@@ -37,13 +24,15 @@
                 </div>
                 <input type="button" onclick="check(this.form)" class="btn" id="btn" value="login" name = "submit"/>
             </form>
+            <!-- 아이디와 패스워드가 일치하는지 확인 -->
             <script> 
                 function check(form)
                 {
                     if(form.user_id.value=="admin"&&form.user_pass.value=="1111")
                     {
                         alert("로그인 성공")
-                        window.location.href = "responsiveheather.html";
+                        // 홈화면(다음화면으로 이동하기)
+                        window.location.href = "./html/Introducepage.html";
                     }else{
                         alert("Error: 아이디 또는 비밀번호가 잘못되었습니다.")
                     }

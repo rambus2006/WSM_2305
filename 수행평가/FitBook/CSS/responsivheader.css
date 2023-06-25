@@ -1,138 +1,266 @@
 
-/* 2. 날씨에 따른 색 추천 팔레트 */
-/* 2-1 배경의 하얀색부분 */
-.colorcard{
-    top:40%;
-    width: 100%;
-    height: 800px;
-    background-color: white;
-    visibility: visible;
-    position: absolute;
-    z-index: 1;
-}
-.container{
-    margin: 0;
-    padding:0;
-    margin-top: 24px;
-    position:relative;
-    width: 100vw;
-    text-align: center;
-    visibility: visible;
-    z-index:0;
-}
-.row{
-
-   display: inline;
-   text-align: center;
-   margin-left: 100%;
-   margin-right:100%;
-   top:400px;
-}
-/* 2-2 각 색깔 밑의 글자  */
-.row h4{
-    color:black;
-}
-/* 2-3 각 색깔 이미지 크기 */
-.row img{
-    width:200px;
-    height:200px;
-}
+/* 1.상단(날씨 API, colorcomment) */
+/* 1-1. 날씨에 다른 이미지 화면  */
 .weather img{
-    height:600px;
-    background-size: contain;
-}
-
-.contentbox{
-    display: grid;
-    	grid-template-columns: repeat(auto-fill,minmax(300px,auto));
-    width: 800px;
-    height: auto;
-    max-height: 600px;
-    max-width: 800px;
-    position: absolute;
+    height:60vh;
     
 }
-#colortext{
-    height:auto;
-    width: 80%;
-    max-height: 600px;
-    max-width: 800px;
-    top:100px;
+/* 1-2. 오늘은 노란색입니다. 문구 */
+#colorcommentY{
     position: relative;
+    width:48vw;
+    height:42vh;
+    left:200px;
 }
+/* 2. 하단(소개,기능) */
+#grid{
+    position: relative;
 
+    display:grid;
+    top:5vh;
+    grid-template-rows:26em 30em 30em;
+  }
+  .intro{
+    position: relative;
+    background-color: white;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 24pt;
+  }
+  .introtitle{
+    position: absolute;
+    left:300px;
+    animation:introtitle 1s ease-out;
+  }
+  .introtitle2{
+    position: absolute;
+    left:300px;
+    top:20%;
+    animation:introtitle 1s ease-out;
+  }
+  .fun{
+    
+    position: relative;
+    background-color: white;
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 24pt;
+    
+  }
+  .funtitle{
+    right: 300px;
+    position: absolute;
+    animation:introtitle2 0.4s ease-out;
+  }
+  .funtitle2{
+    top:20%;
+    right: 300px;
+    position: absolute;
+    animation:introtitle2 0.6s ease-out;
+  }
+  .funtitle3{
+    top:25%;
+    right: 300px;
+    position: absolute;
+    animation:introtitle2 0.8s ease-out;
+  }
+  .funtitle4{
+    top:30%;
+    right: 300px;
+    position: absolute;
+    animation:introtitle2 1s ease-out;
+  }
+  @keyframes introtitle{
+    from{
+        left:-100px;
+        opacity: 0;
+    }
+    to{
+        left:300px;
+        opacity: 1;
+    }
+  }
+  @keyframes introtitle2{
+    from{
+        animation-delay: 10s;
+        right:-100px;
+        opacity: 0;
+        animation-delay: 1s;
+    }
+    to{
+
+        right:300px;
+        opacity: 1;
+        
+    }
+  }
 
 /* 탭 */
 @media screen and (max-width:992px) {
-    .row{
-        margin: 0;
-        text-align: center;
-        top:300px;
+    /* 상단 */
+    .weather img{
+        height:60vh;
+        background-size: contain;
     }
-    .row img{
-        margin:16px;
+    #colorcommentY{
+        width:60vw;
+        height:32vh;
+        left:0;
     }
-    .colorcard{
-        top:40%;
-        width: 100%;
-        height: 800px;
+    /* 2. 하단(소개,기능) */
+    #grid{
+        position: relative;
+        display:grid;
+        top:5vh;
+        grid-template-rows:20em 20em 30em;
+    }
+    /* 2-2소개 */
+    .intro{
+        position: relative;
         background-color: white;
-        visibility: visible;
-        position: absolute;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 20pt;
     }
-    .contentbox{
-        background-color:white;
-        display: grid;
-            grid-template-columns: repeat(auto-fill,minmax(100px,auto));
-        width: 100%;
-        height: auto;
-
+    .introtitle{
         position: absolute;
-        margin-top: 80px;
+        left:100px;
+        animation:introtitle 1s ease-out;
+      }
+      .introtitle2{
+        position: absolute;
+        left:100px;
+        top:20%;
+        animation:introtitle 1s ease-out;
+      }
+      @keyframes introtitle{
+        from{
+            left:-100px;
+            opacity: 0;
+        }
+        to{
+            left:100px;
+            opacity: 1;
+        }
+      }
+      .funtitle{
+        right: 100px; 
+      }
+      .funtitle2{
+        
+        right: 100px;
+      }
+      .funtitle3{
+        
+        right: 100px;
+       
+      }
+      .funtitle4{
+        
+        right: 100px;
+        
+      }
+    .fun{
+        position: relative;
+        background-color: white;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 20pt;
     }
-
+    @keyframes introtitle2{
+        from{
+            animation-delay: 10s;
+            right:-100px;
+            opacity: 0;
+            animation-delay: 1s;
+        }
+        to{
+            
+            right:100px;
+            opacity: 1;
+            
+        }
+      }
 }
 /* 모바일 */
 @media screen and (max-width:768px) {
-    
-    /* 2. 날씨에 따른 색 추천 팔레트 */
-    /* 2-1 color-clear 맑은 날일 때 */
-    .colorcard{
-        top:40%;
-        width: 100%;
-        height: 800px;
-        background-color: white;
-        visibility: visible;
-        position: absolute;
+    /* 사진 밑 내용이 들어갈 컨테이너 */
+    /* 1. 상단 */
+    .weather img{
+        height:40vh;
+        background-size: contain;
     }
-    .container{
-        display: grid;
-    }
-    .row{
-        margin: 0;
-        text-align: center;
-   
-    }
-    .row img{
-       margin:0;
-       width:200px;
-    }
-    .colorimg{
+    #colorcommentY{
         position: relative;
-        display: inline-block;
+        width:60vw;
+        height:20vh;
     }
-    .contentbox{
-        background-color:white;
-        display: grid;
-            grid-template-columns: repeat(auto-fill,minmax(400px,auto));
-        width: 768px;
-        height: 600px;
-
+    /* 하단(소개,기능) */
+    #grid{
+        position: relative;
+        display:grid;
+        top:5vh;
+        grid-template-rows:16em 16em 30em;
+    }
+    .intro{
+        position: relative;
+        background-color: white;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 16pt;
+    }
+    .fun{
+        position: relative;
+        background-color: white;
+        font-family: 'Gothic A1', sans-serif;
+        font-size: 16pt;
+    }
+    .introtitle{
         position: absolute;
-        margin-top: 100px;
-    }
-
+        left:50px;
+        animation:introtitle 1s ease-out;
+      }
+      .introtitle2{
+        position: absolute;
+        left:50px;
+        top:30%;
+        animation:introtitle 1s ease-out;
+      }
+      @keyframes introtitle{
+        from{
+            left:-50px;
+            opacity: 0;
+        }
+        to{
+            left:50px;
+            opacity: 1;
+        }
+      }
+      .funtitle{
+        right: 50px; 
+      }
+      .funtitle2{
         
+        right: 100px;
+      }
+      .funtitle3{
+        
+        right: 50px;
+       
+      }
+      .funtitle4{
+        
+        right: 100px;
+        
+      }
+    @keyframes introtitle2{
+        from{
+            animation-delay: 10s;
+            right:-50px;
+            opacity: 0;
+            animation-delay: 1s;
+        }
+        to{
+            right:50px;
+            opacity: 1;
+            
+        }
+      }
 
     
 }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/ClothInfo2.css">
+    <link rel="stylesheet" href="../CSS/nav.css"> <!--헤더바 css-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> <!--구글 폰트cdn-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"><!--부트스트랩 아이콘cdn-->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> <!--jquery-->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet"> <!--필기체 구글폰트-->
+    <title>옷정보수정</title>
+    <script type="text/javascript">
+    // 옷 마다 정보 가져오는 창 만들기 
+    function openChild()
+        {
+            // window.name = "부모창 이름"; 
+            window.name = "ClothInfo.html";
+            // window.open("open할 window", "자식창 이름", "팝업창 옵션");
+            window.open("T000.html","상의_001");
+        }
+    </script>
+</head>
+<body >
+       <!-- 1. 헤더바 -->
+       <nav class="navbar">
+        <!--1-1. 로고 -->
+        <span class="navbar_logo">
+            <img src="../images/Icon/핏북로고little.png" alt="">
+            <a href="#"></a>   
+        </span>
+
+        <!--1-2. 메뉴 -->
+        <ul class="navbar_menu">
+            <li class="nav-item"><a href="Introducepage.html" class="nav-link">소개</a></li>
+            <li class="nav-item"><a href="Home.html" class="nav-link">홈</a></li>
+            <li class="nav-item"><a href="todayscolor.html" class="nav-link">오늘의 색</a></li>
+            <li class="nav-item"><a href="ClothInfo.html" class="nav-link">옷 정보 수정</a></li>
+            <li class="nav-item"><a href="../mart/index.html" class="nav-link">옷 사러가기</a></li>
+        </ul>
+        <!--1-3. 링크 -->
+        <div class="navbar_links" id="nav_toggle">
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
+    <!-- 1-4. 헤더바 기능 -->
+    <script type="text/JavaScript">
+        const navToggle = document.getElementById("nav_toggle");
+        const navToggleI = nav_toggle.getElementsByTagName("i")[0];
+        const navListUl = document.getElementsByClassName("navbar_menu")[0];
+
+        console.log(navToggleI);
+        console.log(navListUl);
+        //.nav-toggle클릭하면
+        nav_toggle.onclick=()=>{
+            //.nav-toggle i 햄버거메뉴 <-> X
+            //클래스에서 bi-list <-> bi-x-lg
+            navToggleI.classList.toggle("bi-list");
+            navToggleI.classList.toggle("bi-x-lg");
+            //.nav-list .show-menu toggle
+            navListUl.classList.toggle("show-menu");
+        };
+    </script> 
+    <!--2. 상단 grid-->
+    <div class="group">
+        <i id="profile" class="bi bi-person-circle"></i>
+        <span class="text"><h1>admin's CLOSET</h1></span>
+    </div>
+    
+    <!-- 3.아코디언 메뉴 -->
+    <div class="grid2">
+        <div class="menu">
+            <!-- 3-1.아코디언 메뉴 상의  -->
+            <button id="bt1"class="accordion">상의 </button>
+                <div class="panel"> 
+                    <input type="image" src="../images/상의/T001.jpg" onclick="openChild()" style="width:100px; height:100px"></input> 
+                    <input type="image" src="../images/상의/T002.jpg" style="width:100px; height:100px"></input> 
+                    <input type="image" src="../images/상의/T003.jpg" style="width:100px; height:100px"></input> 
+                    <input type="image" src="../images/상의/T004.jpg" style="width:100px; height:100px"></input> 
+                    <input type="image" src="../images/상의/T005.jpg" style="width:100px; height:100px"></input> 
+                    <input type="image" src="../images/상의/T006.jpg" style="width:100px; height:100px"></input> 
+                </div>
+            <!-- 3-2.아코디언 메뉴 하의  -->
+            <button id="bt2" class="accordion">하의</button>
+            <div class="panel">
+                <input type="image" src="../images/하의/P001.jpg" style="width:100px; height:100px"></input> 
+                <input type="image" src="../images/하의/P002.jpg" style="width:100px; height:100px"></input>
+                <input type="image" src="../images/하의/P003.jpg" style="width:100px; height:100px"></input>
+                <input type="image" src="../images/하의/P004.jpg" style="width:100px; height:100px"></input>
+                <input type="image" src="../images/하의/P005.jpg" style="width:100px; height:100px"></input>
+            </div>
+            <!-- 3-3.아코디언 메뉴 신발  -->
+            <button id="bt3" class="accordion">신발</button>
+            <div class="panel">
+                <input type="image" src="../images/신발/S001.jpg" style="width:100px; height:100px"></input> 
+                <input type="image" src="../images/신발/S002.jpg" style="width:100px; height:100px"></input> 
+                <input type="image" src="../images/신발/S003.jpg" style="width:100px; height:100px"></input> 
+                <input type="image" src="../images/신발/S004.jpg" style="width:100px; height:100px"></input> 
+                <input type="image" src="../images/신발/S005.jpg" style="width:100px; height:100px"></input> 
+                <input type="image" src="../images/신발/S006.jpg" style="width:100px; height:100px"></input> 
+    
+            </div>
+        </div>
+    </div>
+    <!-- 3-4.아코디언 메뉴 스크립트(지우지 말것!) -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+    
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

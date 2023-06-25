@@ -1,0 +1,188 @@
+/* 요소 가운데 정렬 */
+body{
+    background-color: #F6EBE2;
+}
+
+#loginform{
+    background-color: #fff;
+    width:40vw;
+    height: 40vh;
+    border-radius: 10px;
+    margin:120px auto;
+    padding:50px;
+    box-shadow: 10px 10px 5px #6b553b;
+    
+}
+
+#loginform h1{
+    top:320px;
+    font-size: 45px;
+    text-align: center;
+}
+#loginform i{
+    font-family: 'Dancing Script', cursive;
+}
+.userid label{
+    position: relative;
+    display: inline-block;
+    top:120px;
+    left:80px;
+    justify-content: center;
+}
+#user{
+    top:120px;
+    left:120px;
+    position: relative;
+	width: 20vw;
+	height: 24px;
+	background: #EEEEEE;
+	border-radius: 40px;
+	border:none;
+}
+.usernametext{
+    position: absolute;
+    top:400px;
+
+}
+.userpw label{
+    position: relative;
+    display: inline-block;
+    top:140px;
+    left:80px;
+    justify-content: center;
+}
+#pass{
+    top:140px;
+    left:120px;
+    position: relative;
+	width: 20vw;
+	height: 24px;
+	background: #EEEEEE;
+	border-radius: 40px;
+	border:none;
+}
+.btn{
+    top:160px;
+    left: 140px;
+    height: 40px;
+    position: relative;
+    width:24vw;
+    color:rgb(255, 255, 255);
+    background-color: #9A7B57;
+    font-size: large;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+ 
+}
+
+@media screen and (max-width: 992px) {
+    #form {
+      width: 65%;
+      margin-left:none;
+      padding:40px;
+    }
+    /* 전체를 둘러싼 흰색 상자  */
+    #loginform{
+        background-color: #fff;
+        width:48vw;
+        height:40vh;
+        border-radius: 10px;
+        margin:120px auto;
+        padding:50px;
+        
+    }
+        /* 아이디와 비밀번호 */
+    .userid label{
+        position: relative;
+        display: inline-block;
+        top:120px;
+        left: 0;
+        justify-content: center;
+    }
+
+    #user{
+        width: 50vw;
+        left:0;
+    }
+    .userpw label{
+        position: relative;
+        display: inline-block;
+        top:140px;
+        left: 0;
+        justify-content: center;
+    }
+    #pass{
+        width: 50vw;
+        left: 0;
+    }
+
+    .btn{
+        top:140px;
+        left: 0px;
+        height: 40px;
+        position: relative;
+        width:50vw;
+        color:rgb(255, 255, 255);
+        background-color: #9A7B57;
+        font-size: large;
+        border-radius: 10px;
+        border:none;
+        cursor: pointer;
+    }
+
+  }
+  @media screen and (max-width: 768px) {
+    #form {
+      width: 100%;
+      margin-left:none;
+      padding:40px;
+    }
+    #loginform{
+        background-color: #fff;
+        width:48vw;
+        height:40vh;
+        border-radius: 10px;
+        margin:120px auto;
+        padding:50px;
+        
+    }
+        /* 아이디와 비밀번호 */
+    .userid label{
+        position: relative;
+        display: inline-block;
+        top:120px;
+        left: 0;
+        justify-content: center;
+    }
+    
+    #user{
+        width: 50vw;
+        left:0;
+    }
+    .userpw label{
+        position: relative;
+        display: inline-block;
+        top:140px;
+        left: 0;
+        justify-content: center;
+    }
+    #pass{
+        width: 50vw;
+        left: 0;
+    }
+    .btn{
+        top:140px;
+        left: 0px;
+        height: 40px;
+        position: relative;
+        width:50vw;
+        color:rgb(255, 255, 255);
+        background-color: #9A7B57;
+        font-size: large;
+        border-radius: 10px;
+        border:none;
+        cursor: pointer;
+    }
+
+  }
