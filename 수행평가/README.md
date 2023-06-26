@@ -5,7 +5,8 @@
 옷을 관리할 수 있도록 도와줍니다. 
 ---
 ## 실행방법
-1. (https://korbmsfitbook.netlify.app/)링크접속
+1. (https://korbmsfitbook.netlify.app/)
+   링크접속
 2. 로그인(ID: admin ,PW:1111) 넣고 로그인
 3. '소개' 카테고리를 통해 간단한 소개와 기능을 안내받을 수 있습니다. 
 4. 홈화면에 오늘의 날씨와 추천색에 따른 옷코디를 확인합니다. 
