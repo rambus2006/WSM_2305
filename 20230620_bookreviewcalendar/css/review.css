@@ -1,9 +1,19 @@
 main {
+    margin: 0 auto; /*0: top bottom , auto: right,left*/
     margin-top: calc(44px + 100px);
+    width: calc(100% - 100px * 2);
 }
 
 .container {
     display: flex;
+}
+.info-groups{
+    border: 1px solid blue;
+    flex-wrap: wrap;
+    min-width:200px;
+    margin: 0 40px;
+    gap:40px;
+
 }
 
 .info, .review {
@@ -12,39 +22,85 @@ main {
 
 .info-group {
     flex-direction: column;
+    gap:40px;
+
+/*---글제목이 창크기가 줄면 넘치는 overflow 되는 것을 해결하기 위해 ...을 넣는 과정 */
+    overflow: hidden; 
+}
+.label{
+    color:#777;
+}
+.title,
+.author,
+.publisher,
+.read-date,
+.synopsis,
+.phrase{
+    font-size: 1.25rem;
+    white-space: nowrap; /*글이 넘쳐도 밑으로 내리지 말라고 설정 */
+    overflow: hidden;
+    text-overflow: ellipsis; /*...붙이기 */
 }
 
 .reviews {
     flex-direction: column;
+    /* margin:40px 0; */
+
 }
 
 .book-image {
     width: 200px;
-    height: 400px;
-}
+    /* height: 400px; */
 
-.info {
-    width: 300px;
-    height: 150px;
+}
+.book-image>img{
+    width:200px; /*처음 이미지 너비 */
+    min-width:200px; /*너비를 줄여도 더이상 작아지지 않게 최소값을 설정함.*/
+    /* 책 효과  */
+    box-shadow: 0 16px 32px #aaa; /*그림자 */
+    border-radius: 8px;     /*둥근 모서리 */
+    transition: all 2s;    /*책 애니메이션 */
+}
+.book-image> img:hover{
+    transform: perspective(400px) rotateY(20deg); /*perspective관점/rotateY : y축을 기준으로 회전 */
 }
 
 .review {
-    height: 150px;
+    height: 100px;
+}
+.synopsis input,
+.phrase input{
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 540px) {  /* 540px 이하의 너비 이하면 아래 스타일 적용 */
+    main {
+        margin-top: calc(44px + 40px);
+    }
+    .image-info-groups {
+        flex-direction: column;
+       
+    }
+    .book-image{
+        margin: 0 auto; /*책 가운데로 배치 */
+    }
+    .info-groups{
+        margin: 40px 0 0 ;
+    }
+
 }
 
 /* delete me */
-main div {
+/* main div {
     border: 2px solid violet;
 }
-
 .book-image {
-    background-color: slateblue;
+    background-color: steelblue;
 }
-
 .info {
-    background-color: tomato;
+    background-color: magenta;
 }
-
 .review {
-    background-color: seagreen;
-}
+    background-color: chocolate;
+} */

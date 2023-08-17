@@ -26,10 +26,10 @@ for (let book of books) {
     }
 }
 // -> title, author, publisher, bookImage 알아내자
-//왜 안되는지 알아보기 
+//왜 안되는지 알아보기 -> title 변수 선언을 여러번 해서(민서 바보)
 // let title = bookData.title;
-// let title=bookData.title;
-// let title = bookData["title"];
+// title=bookData.title;
+let title = bookData["title"];
 let author = bookData.author;
 let publisher = bookData.publisher;
 let bookImage = bookData.img;
@@ -45,7 +45,18 @@ const publisherDiv = document.getElementsByClassName("publisher")[1];
 publisherDiv.innerHTML = publisher;
 const bookImageDiv = document.getElementsByClassName("book-image")[0];
 bookImageDiv.innerHTML = `<img src="${bookImage}" />`
-
+const readDateDiv= document.getElementsByClassName("read-date")[1];
+let now = "2030년 8월 17일";
+now = new Date(); //현재 날짜와 시각 객체 
+let year=now.getFullYear(); 
+let month = now.getMonth(); //8월이 7로 나와.즉, (실제 월)-1로 리턴되는 경우가 많다.  
+let date=now.getDate(); //js에서는 요일로 이야기 하는 경우가 많다. 
+let day;
+let weeks=["일","월","화","수","목","금","토"];
+day = weeks[day] + "요일";
+readDateDiv.innerHTML = now
+now = `${year}년 ${month+1}월 ${date}일 ${day}`; 
+readDateDiv.innerHTML = now;
 
 // let name = "최유진";
 // console.log(`안녕, ${name}`);
