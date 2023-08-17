@@ -2,6 +2,13 @@
 let url_href = window.location.href;        //브라우저 창에 있는 주소
 const bookId = new URL(url_href).searchParams.get("book");
 console.log(`bookId: ${bookId}, type: ${typeof bookId}`);   //"3", string
+//20230817
+//bookId가 null이면, index.html 로 가게 하기 
+if(bookId == null){
+    window.location.href="index.html"
+    // window.open("index.html",target="_top"); //새로운 창 열어서 이동하는 문제 해결 
+
+}
 
 // -> string을 number로 변환: bookIdNumber
 let bookIdNumber = parseInt(bookId);    //string->number
@@ -19,7 +26,9 @@ for (let book of books) {
     }
 }
 // -> title, author, publisher, bookImage 알아내자
-let title = bookData.title;
+//왜 안되는지 알아보기 
+// let title = bookData.title;
+// let title=bookData.title;
 // let title = bookData["title"];
 let author = bookData.author;
 let publisher = bookData.publisher;

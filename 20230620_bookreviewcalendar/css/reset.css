@@ -13,5 +13,5 @@ a {
 }
 img{
     max-width: 100%; /*비율 유지하면서 사진을 보여줄 수 있다.  */
-    /* height:auto; */
+    height:auto;
 }
