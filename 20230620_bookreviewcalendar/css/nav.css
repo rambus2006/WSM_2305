@@ -32,6 +32,7 @@ header{
     top:0;
     right:0; /*오른쪽 끝까지 */
     left:0;  /*왼쪽 끝까지 */
+    z-index: 100;
 }
 nav{
     height:44px;    
