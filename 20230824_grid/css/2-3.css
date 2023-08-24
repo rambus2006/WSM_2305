@@ -1,0 +1,8 @@
+.container{
+    display: grid;
+    justify-content:column ;
+    grid-template-rows: 5fr;
+}
+.item{
+    border: 2px solid black;
+}
