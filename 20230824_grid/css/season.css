@@ -1,0 +1,36 @@
+.container .item{
+    border: 2px solid black;
+}
+html,
+body {
+    height:100%;
+}
+.container{
+    width: 100%;
+    height: 100%; /*높이를 브라우저 창전체를 차지하는 방법:100vh viewport:브라우저가 표시하는 영역*/
+    display: grid;
+    grid-template-columns: 3fr 7fr;/*1fr 1fr : 열의 비율을 1:1로 지정한다. */ /*50% 50%; /*뒤에 s 중요*/
+    grid-template-rows:4fr 6fr;
+}
+.item{
+    display: flex; /*메인축은 수평*/
+    /* 정답 */
+    justify-content: center; 
+    align-items: center;
+    /* 이렇게 해도 되긴 함(근데 위쪽꺼 외우기) , */
+     /* text-align: center;
+    line-height: 50vh; */
+
+}
+.item1{
+    background-color: gold;
+}
+.item2 {
+background-color: skyblue;
+}
+.item3{
+    background-color: bisque;
+}
+.item4{
+    background-color: red;
+}
