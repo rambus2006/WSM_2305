@@ -1,20 +1,77 @@
 main{
-    margin-top: calc(44px + 100px);
+    margin:0 auto; /*위에서 0으로 맞추기,좌우는 자동   */
+    margin-top: calc(44px + 100px); /*144px(헤더 + 여백)으로 높이 띄기 */
+    width: calc(100% - 100px*2); /*200px씩 떼서 준다.잘 이해 안감  */
+    max-width: 800px;
 }
 .title.flex-container{
     display: flex;
     justify-content: center;
     font-size: 2rem;
     column-gap: 40px;
+    margin-bottom: 20px;
+
 }
 .weekday.container{
     display: grid;
     grid-template-columns: repeat(7,1fr);
     text-align: center;
     font-size: 1.5rem;
+    background-color: darkturquoise;
+    border-radius: 10px;
+    padding:10px;
+
+}
+/* 20230907수업 */
+.dates.container{
+    display: grid;
+    grid-template-columns: repeat(7,1fr); /*열을 정의하는 속성*/
+    /* 필요없어짐(밑에 가운데 정렬 있기 때문에)text-align: center; */
+    font-size: 1.25rem;
+    padding:10px; /*안주면 일이란 요일과 1의 위치가 맞지 않는다. */
+
+}
+.date.item{
+    padding:10px;
+    aspect-ratio: 1/1; /*div의 비율을 1:1로 맞춰주는 것 */
+    /* 1,2,3... 날짜들의 위치를 정가운데로 */
+    /* 글자 수평, 수직 가운데로(flex방식으로) */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* 글자 수평, 수직 가운데로(grid방식으로) */
+    display: grid;
+    place-items: center;
+}
+.date.item:nth-child(1){
+
+    /* 열 -> 1-> 6 열만 지정할 때는 column만 옮기면 된다. */
+    /* 월이 옮겨가도 날짜가 맞춰지려면 js가 필요하다.  */
+    grid-column:6/7;
+}
+/* 오늘 포커싱 */
+.review.flex-container{
+    display: flex; /*flex의 기본값은 수평정렬, flex-direction: column으로 수직정렬할 수 있다. */
+    flex-direction: column;
+    font-size: 1.25rem;
+    row-gap: 10px; /* 수직으로 간격을 띄여준다. */
+    background-color: darkturquoise;
+    border-radius: 10px;
+    padding:10px;
+
+}
+/* tablet:요즘 태블릿은 더 크다.*/
+@media screen and (max-width:720px) {
     
 }
-/* delete me */
-main * {
-    border: 2px solid black;
+/*moblie*/
+@media screen and (max-width:540px) {
+    main{
+        margin-top: calc(44px + 40px);
+        width:calc(100% - 10px*2);
+    }
 }
+/* delete me */
+/* main * {
+    border: 2px solid black;
+} */
