@@ -1,5 +1,5 @@
 main{
-    margin:0 auto; /*위에서 0으로 맞추기,좌우는 자동   */
+    margin:0 auto; /*가운데 배치: 위에서 0으로 맞추기,좌우는 자동   */
     margin-top: calc(44px + 100px); /*144px(헤더 + 여백)으로 높이 띄기 */
     width: calc(100% - 100px*2); /*200px씩 떼서 준다.잘 이해 안감  */
     max-width: 800px;
