@@ -68,6 +68,20 @@ const setCalendar=(year,month) =>{
     //CSS { grid-column-start:firstDateDay+1;}
     firstDateDiv.style.gridColumnStart = firstDateDay + 1;
 
+    //토: 파랑 
+    //여러개의 토요일 날짜가 리스트로 들어감 
+    let saturdayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${7-firstDateDay})`); //토요일이 7일 간격
+    for (let dateItem of saturdayDivs){ //하나씩 꺼내기 
+        //color:blue를 표현하는 법 
+        dateItem.style.color="blue"; //스타일링 
+    }
+    //일: 빨강 
+    let sundayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${((7-firstDateDay)+1)%7})`); //일요일: 토요일 식 % 7
+    for(let dateItem of sundayDivs){
+        dateItem.style.color="red";
+    }
+
+
 }
 //함수 호출 
 setCalendar(year,month);
@@ -75,6 +89,18 @@ setCalendar(year,month);
 //html 에서 js로 가져오기 
 const leftDiv = document.getElementsByClassName("left")[0];
 const rightDiv = document.getElementsByClassName("right")[0];
+//제목 누르면 현재 월로 오게 만들기 
+const thisMonthDiv = document.getElementsByClassName("month")[0];
+thisMonthDiv.onclick = () => {
+    //앞에서 선언하면 지금의 날짜가 안나올 수 있기 때문에 지금 날짜구해줌 
+    now=new Date();
+    // 현재 년
+    year=now.getFullYear(); 
+    // 현재 월 
+    month = now.getMonth()+1;
+    setCalendar(year,month);
+}
+
 /*
 1. 익명함수 생성 
 - 함수를 호출하기만 하고, 실행시키면 안된다. (console.log(`${month}월`))을 쓰면 undefind라고 뜬다. 

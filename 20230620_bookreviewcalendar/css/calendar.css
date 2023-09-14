@@ -12,6 +12,13 @@ main{
     margin-bottom: 20px;
 
 }
+/* 여러개의 클래스에 한번에 css 주기  */
+.left, 
+.right,
+.month{
+    cursor: pointer;
+}
+
 .weekday.container{
     display: grid;
     grid-template-columns: repeat(7,1fr);
@@ -43,12 +50,19 @@ main{
     display: grid;
     place-items: center;
 }
-.date.item:nth-child(1){
-
-    /* 열 -> 1-> 6 열만 지정할 때는 column만 옮기면 된다. */
-    /* 월이 옮겨가도 날짜가 맞춰지려면 js가 필요하다.  */
-    grid-column:6/7;
+/*js로 처리
+ .date.item:nth-child(7n+2){
+    color: blue;
 }
+.date.item:nth-child(7n+3){
+    color:red;
+} */
+/* .date.item:nth-child(1){
+
+    /* 열 -> 1-> 6 열만 지정할 때는 column만 옮기면 된다.
+    /* 월이 옮겨가도 날짜가 맞춰지려면 js가 필요하다. 
+    grid-column:6/7;
+} */
 /* 오늘 포커싱 */
 .review.flex-container{
     display: flex; /*flex의 기본값은 수평정렬, flex-direction: column으로 수직정렬할 수 있다. */
@@ -60,6 +74,8 @@ main{
     padding:10px;
 
 }
+
+
 /* tablet:요즘 태블릿은 더 크다.*/
 @media screen and (max-width:720px) {
     
