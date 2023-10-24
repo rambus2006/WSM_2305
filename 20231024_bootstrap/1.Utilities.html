@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. Utilities 유용하다 </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"><!--css-->
+    <!-- 시험: css는 head안에, js 파일은 body 끝에  -->
+    <!-- cdn: 링크로 다른 곳에서 적용하는 라이브러리를 사용할 수 있다.  -->
+</head>
+<body>
+    <h1>에이치원</h1>
+    <h6>제일 작은 헤더의 숫자 6</h6>
+    <p>본문 패리그래프</p>
+    <hr>
+    <!-- head처럼 작용 
+    부트스트랩은 트위터에서 만들어서 배포했다. --> 
+    <header class="display-1">Background,Spacing,Colors,Text,Borders</header>
+    <header class="display-2">Background,Spacing,Colors,Text,Borders</header>
+    <header class="display-3">Background,Spacing,Colors,Text,Borders</header>
+    <header class="display-4">Background,Spacing,Colors,Text,Borders</header>
+    <header class="display-5">Background,Spacing,Colors,Text,Borders</header>
+    <header class="display-6">Background,Spacing,Colors,Text,Borders</header>
+    <header class="display-7">Background,Spacing,Colors,Text,Borders</header>
+    <header class="display-8">Background,Spacing,Colors,Text,Borders</header>
+    <header class="display-9">Background,Spacing,Colors,Text,Borders</header>
+    
+    <!-- .m-0.bg-primary -->
+    <!-- alt 누르고 다른 커서 생겼으면 하는 곳에 커서 클릭 -->
+    <!-- margin 이 바뀐다. (m이 margin, 5가 margin이 가장 크다. 6은 없음) -->
+    <div class="m-0 bg-primary">.m-0.bg-primary</div>
+    <div class="m-1 bg-primary">.m-1.bg-primary</div>
+    <div class="m-2 bg-primary">.m-2.bg-primary</div>
+    <div class="m-3 bg-primary">.m-3.bg-primary</div>
+    <div class="m-4 bg-primary">.m-4.bg-primary</div>
+    <div class="m-5 bg-primary">.m-5.bg-primary</div>
+    <hr>
+    <!-- x축, y축 -->
+    <div class="mx-5 bg-primary">.m-5.bg-primary</div>
+    <div class="my-5 bg-primary">.m-5.bg-primary</div>
+    <hr>
+    <!-- t,b,s,e -->
+    <div class="mt-5 bg-primary">.m-5.bg-primary</div> <!--top-->
+    <div class="mb-5 bg-primary">.m-5.bg-primary</div> <!--end-->
+    <div class="ms-5 bg-primary">.m-5.bg-primary</div> <!--start(왼쪽이 빔)-->
+    <div class="me-5 bg-primary">.m-5.bg-primary</div> <!--end(오른쪽 빔)-->
+        <!--
+        <s,e> 
+        왼쪽부터 오른쪽으로 글씨 쓰는 게 익숙하지만 아랍쪽 문화권은 반대이다. 
+        left,right를 더 쉽게 적용시키기 위해 바꿔뒀다. 
+        <x> : 가로 
+        <y> : 세로 
+        t - for classes that set margin-top or padding-top
+        b - for classes that set margin-bottom or padding-bottom
+        s - (start) for classes that set margin-left or padding-left in LTR, margin-right or padding-right in RTL
+        e - (end) for classes that set margin-right or padding-right in LTR, margin-left or padding-left in RTL
+        x - for classes that set both *-left and *-right
+        y - for classes that set both *-top and *-bottom
+        blank - for classes that set a margin or padding on all 4 sides of the element
+     -->
+    <hr>
+    <!-- padding  -->
+    <div class="m-0 p-0 bg-success">.m-0.p-0.bg-success</div>
+    <div class="m-0 p-1 bg-success">.m-0.p-1.bg-success</div>
+    <div class="m-0 p-2 bg-success">.m-0.p-2.bg-success</div>
+    <div class="m-0 p-3 bg-success">.m-0.p-3.bg-success</div>
+    <div class="m-0 p-4 bg-success">.m-0.p-4.bg-success</div>
+    <div class="m-0 p-5 bg-success">.m-0.p-5.bg-success</div>
+
+    <!-- 
+        0 - for classes that eliminate the margin or padding by setting it to 0
+        1 - (by default) for classes that set the margin or padding to $spacer * .25
+        2 - (by default) for classes that set the margin or padding to $spacer * .5
+        3 - (by default) for classes that set the margin or padding to $spacer
+        4 - (by default) for classes that set the margin or padding to $spacer * 1.5
+        5 - (by default) for classes that set the margin or padding to $spacer * 3
+        auto - for classes that set the margin to auto
+     -->
+    <hr>
+    <div class="m-0 p-5 bg-warning border-top border-5">.m-0.p-5.bg-warning.border</div>
+    <div class="m-0 p-5 bg-warning border-end border-5 rounded">.m-0.p-5.bg-warning.border-5 rounded</div>
+    <hr>
+    <div class="m-0 p-5 bg-warning border-top border-5 rounded">.m-0.p-5.bg-warning.border-5 rounded</div>
+    <div class="m-0 p-5 bg-warning border-end border-5 rounded">.m-0.p-5.bg-warning.border-5 rounded</div>
+    <div class="m-0 p-5 bg-warning border-bottom border-5 rounded">.m-0.p-5.bg-warning.border-5 rounded</div>
+    <div class="m-0 p-5 bg-warning border-start border-5 rounded">.m-0.p-5.bg-warning.border-5 rounded</div>
+    <hr>    
+    <div class="m-0 p-5 bg-warning border-start border-5 rounded text-white text-start">.m-0.p-5.bg-warning.border-5 rounded</div>
+    <div class="m-0 p-5 bg-warning border-start border-5 rounded text-white text-center">.m-0.p-5.bg-warning.border-5 rounded</div>
+    <div class="m-0 p-5 bg-warning border-start border-5 rounded text-white text-end">.m-0.p-5.bg-warning.border-5 rounded</div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> <!--script:src-->
+</body>
+</html>
