@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-배포
+
 ===
 ### netrify 사이트 
 https://macmap.netlify.app/
