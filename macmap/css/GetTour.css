@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html,
 body{
     margin:0;
@@ -139,4 +140,147 @@ iframe{
        border-radius: 10%;
     }
     
+=======
+html,
+body{
+    margin:0;
+    padding:0;
+    
+    /* text-align: center; */
+}
+main{
+    margin:0 20%;
+    width:50vw;
+}
+.contents{
+    margin-top:12vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr auto ;
+}
+iframe{
+    grid-row:1/2;
+    grid-column: 1/2;
+    width:18vw;
+    height:30vh;
+}
+#countryname{
+    /* grid-area:countryname; */
+    grid-row:1/2;
+    grid-column: 2/3;
+    
+    font-size: 20px;
+    width:10vw;
+    height:4vh;
+}
+#desc{
+    grid-row:1/2;
+    grid-column: 2/3;
+    margin-top: 44px;
+    font-size: 14px;
+    width:30vw;
+    
+}
+#destination{
+    grid-row: 2/3;
+    grid-column: 1/3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    /* grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr; */
+   
+    height: 20vh;
+}
+.destination_div{
+    width:33%;
+    background-color: rgb(216, 216, 216);
+    border-radius: 10%;
+    text-align: center;
+    padding-top:4%;
+   
+}
+.destination_div>.destination_name{
+    font-size: 18px;
+    gap:4%;
+}
+.destination_div>img{
+   width:90%;
+   height:70%;
+   border-radius: 10%;
+}
+/* 반응형 */
+@media screen and (max-width:768px){
+    
+    #desc{
+        font-size: 12px;
+        width:40vw;
+    }
+    .destination_div>.destination_name{
+        font-size: 12px;
+    }
+    
+}
+@media screen and (max-width:540px){
+    .contents{
+        margin-top:4vh;
+    }
+    iframe{
+        width:100%;
+        height:24vh;
+    }
+    .contents{
+        display: grid;
+        
+        grid-template-columns: 1fr  ;
+    }
+    #countryname{
+        /* grid-area:countryname; */
+        grid-row:2/3;
+        grid-column: 1/2;
+        
+        width:10vw;
+        height:4vh;
+        
+    }
+    #desc{
+        grid-row:2/3;
+        grid-column: 1/2;
+        margin-top: 44px;
+        font-size: 10px;
+        width:100%;
+        height:40%;
+    }
+
+    #destination{
+        grid-row: 3/4;
+        grid-column: 1/2;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        flex-direction: row;
+        /* grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr; */
+       
+        height: 10vh;
+    }
+  
+    .destination_div{
+        margin-top: 10%;
+        gap:3%;
+        width: 50%;
+        height:100%;
+    }
+    .destination_div>.destination_name{
+        font-size: 8px;
+    }
+    .destination_div>img{
+       width:90%;
+       height:70%;
+       border-radius: 10%;
+    }
+    
+>>>>>>> f1d49be0baeee418e7d0a378a819cb85dcc301dc
 }
