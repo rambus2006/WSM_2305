@@ -1,0 +1,274 @@
+<<<<<<< HEAD
+body {
+    margin: 0;
+    font-family: 'Jua';
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 8px 24px;
+}
+.navbar__logo{
+    left: 0;
+}
+.navbar__logo >img {
+    width:40px;
+    height: auto;
+
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    justify-content: center;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+    
+}
+.navbar__menu li:hover {
+    background-color: grey;
+    border-radius: 4px;
+}
+
+.navbar__links {
+    list-style: none;
+    padding-left: 0;
+    color: teal;
+    display: flex;
+}
+
+.navbar__links li {
+    padding: 8px 12px;
+}
+
+.navbar__toggleBtn {
+    display: none;
+    position: absolute;
+    right: 0px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar__links {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar__toggleBtn {
+        display: block;
+    }
+
+    .navbar__menu.active,
+    .navbar__links.active {
+        display: flex;
+    }
+=======
+<<<<<<< HEAD
+body {
+    margin: 0;
+    font-family: 'Jua';
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 8px 24px;
+}
+.navbar__logo{
+    left: 0;
+}
+.navbar__logo >img {
+    width:40px;
+    height: auto;
+
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    justify-content: center;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+    
+}
+.navbar__menu li:hover {
+    background-color: grey;
+    border-radius: 4px;
+}
+
+.navbar__links {
+    list-style: none;
+    padding-left: 0;
+    color: teal;
+    display: flex;
+}
+
+.navbar__links li {
+    padding: 8px 12px;
+}
+
+.navbar__toggleBtn {
+    display: none;
+    position: absolute;
+    right: 0px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar__links {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar__toggleBtn {
+        display: block;
+    }
+
+    .navbar__menu.active,
+    .navbar__links.active {
+        display: flex;
+    }
+=======
+body {
+    margin: 0;
+    font-family: 'Jua';
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 8px 24px;
+}
+.navbar__logo{
+    left: 0;
+}
+.navbar__logo >img {
+    width:40px;
+    height: auto;
+
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    justify-content: center;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+    
+}
+.navbar__menu li:hover {
+    background-color: grey;
+    border-radius: 4px;
+}
+
+.navbar__links {
+    list-style: none;
+    padding-left: 0;
+    color: teal;
+    display: flex;
+}
+
+.navbar__links li {
+    padding: 8px 12px;
+}
+
+.navbar__toggleBtn {
+    display: none;
+    position: absolute;
+    right: 0px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar__links {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar__toggleBtn {
+        display: block;
+    }
+
+    .navbar__menu.active,
+    .navbar__links.active {
+        display: flex;
+    }
+>>>>>>> 056b89ef115298f50542ca9be99ba1d8f6206d81
+>>>>>>> f1d49be0baeee418e7d0a378a819cb85dcc301dc
+}

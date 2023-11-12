@@ -1,0 +1,37 @@
+<<<<<<< HEAD
+html,
+body{
+    margin: 0;
+    padding:0;
+}
+.postcontents{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: aqua;
+=======
+<<<<<<< HEAD
+html,
+body{
+    margin: 0;
+    padding:0;
+}
+.postcontents{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: aqua;
+=======
+html,
+body{
+    margin: 0;
+    padding:0;
+}
+.postcontents{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: aqua;
+>>>>>>> 056b89ef115298f50542ca9be99ba1d8f6206d81
+>>>>>>> f1d49be0baeee418e7d0a378a819cb85dcc301dc
+}
